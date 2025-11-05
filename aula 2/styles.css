@@ -92,7 +92,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 442px;
-    width: 100%;
+    width: 94%;
     background-color: rgb(12, 7, 56);
     padding: 50px;
 }
@@ -117,11 +117,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: rgb(12, 7, 56);
     height: 77px;
     width: 100%;
     border-radius: 70px;
-    color: white;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .card-direito{
@@ -132,28 +133,117 @@ body{
     border-radius: 50px;
 }
 
-.informaçoes-do-cao{
-    height: 1200px;
-    width: 100%;
+.card-conterni {
+    height: 1280;
+    margin-top: 148px;
+    display: flex;
+    justify-content: center;
+    margin: 184px 60px 0px 60px;
+
 }
 
-.informaçoes-ld-esquerdo h1{
+.card-cachorro2 {
+     width: 40%;
+}
+
+.card-cachorro2 img{
+    height: 800px;
+    width: 110%;
+    border-radius: 20px;
+}
+
+.card-texto {
+    margin: 0px;
+    font-size: 24px;
+    width: 50%;
+    margin-left: 50;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.card-texto h3, p{
+    color: #5c5c5c;
+}
+
+.rodape{
+    background-color: rgb(12, 7, 56);
+}
+
+.rodape-titulo{
+    text-align: center;
+    margin: 50px 0px 50px 0px;
+}
+
+.rodape-titulo h1{
+    padding: 50px 0px 50px 0px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.rodape-pesquisa{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+
+.rodape-pesquisa input{
+    width: 384px;
+    height: 50px;
+    background-color: rgb(12, 7, 56);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    outline: none;
+    color: #c4c4c4;
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+.botao-assinar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 58px;
+    background-color: #edc154;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.botao-assinar p{
+    font-size: 24px;
+    color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
     font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    height: 400px;
-    width:43%;
-    font-size: 31px;
 }
 
-.informaçoes-ld-esquerdo p{
+.rodape-menu{
+    margin-top: 50px;
+}
+
+.rodape-grupo-menu{
     display: flex;
+    color: #ffffff;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+}
+
+.grupo-itens ul{
+    display: flex;
+    margin-bottom: 0px;
+}
+
+.grupo-itens li{
+    margin: 20px;
+    font-size: 16px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    height: 0px;
-    width:46%;
-    font-size: 28px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.rodape-linha{
+    height: 2px;
+    width: 100%;
+    background-color: #ffffff;
 }
