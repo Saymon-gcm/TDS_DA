@@ -243,7 +243,34 @@ body{
 }
 
 .rodape-linha{
+    margin-top: 0px;
     height: 2px;
     width: 100%;
     background-color: #ffffff;
+    width: 100%;
+}
+
+.rodape-sociais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px 0px 0px;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    background-color: #ebc154;
+    fill:#ffffff;
+    margin: 25px;
+    cursor: pointer;
+}
+
+.icon svg{
+    height: 50px;
+    width: 50px;
 }

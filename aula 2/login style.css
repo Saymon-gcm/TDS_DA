@@ -1,0 +1,14 @@
+body{
+    margin: 0px;
+}
+
+.login-cabeçalho{
+    display: flex;
+}
+
+.login-ld-direito{
+    background-image: url("./imagens/login\ buldog.png");
+    width: 40%;
+    height: 915px;
+    background-size: cover;
+}
