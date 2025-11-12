@@ -51,6 +51,7 @@ body{
     margin-left: 160px;
     font-weight: normal;
     font-size: 20px;
+    margin-top: 90px;
 }
 
 .apple{
@@ -66,6 +67,7 @@ body{
     margin-left: 160px;
     font-weight: normal;
     font-size: 20px;
+    margin-top: 15px;
 }
 
 .email{
@@ -81,4 +83,68 @@ body{
     margin-left: 160px;
     font-weight: normal;
     font-size: 20px;
+    margin-top: 15px;
+}
+
+.google img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 38px;
+}
+
+.apple img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 38px;
+}
+
+.email img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 38px;
+}
+
+.google p{
+    margin-right: 60px;
+}
+
+.apple p{
+    margin-right: 70px;
+}
+
+.email p{
+    margin-right: 60px;
+}
+
+.login-ld-direito p{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight:normal;
+    margin-right: 40px;
+}
+
+.login-bot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(12, 7, 56);
+    height: 40px;
+    /* width: 500px; */
+    border-radius: 70px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    /* margin-left: 140px; */
+    /* margin-top: 255px; */
+    margin:170px 300px 0px 300px;
+    text-decoration: none;
+}
+
+.login-bot p{
+    font-size: 25px;
+    margin-left: 40px;
 }
