@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles.css">
     <title>Lista</title>
 </head>
-<body>
-    <input id="campo" type="text">
-    
-    <button onclick="add()">Adicionar</button>
-    
-    <ul id="itens">
 
-    </ul>
-    
+<body>
+
+
+    <div class="lista">
+        <img id="cesto" src="./Imagens/cesto-superMercado.png" alt="cesto">
+
+
+        <div class="color">
+            <h2>Adicione seus itens:</h2>
+            <input id="campo" type="text">
+            <button id="9" onclick="add()">Adicionar</button>
+            <div id="linha">
+                <ul id="itens"></ul>
+            </div>
+        </div>
+
+
+    </div>
+
+
     <script src="./script.js"></script>
+
+
 </body>
+
 </html>
