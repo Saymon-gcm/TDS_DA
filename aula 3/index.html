@@ -1,31 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pr-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascript</title>
+    <title>Javascript</title>
 </head>
 
 <body>
+
     <input id="campo1" type="text">
     <input id="campo2" type="text">
-    <button anclick="soma()"></button>
-    <button anclick="soma()">-</button>
-    <button anclick="soma()">/</button>
-    <button anclick="soma()">*</button>
+    <button onclick="Soma()">+</button>
+    <button onclick="Subtração()">-</button>
+    <button onclick="Multiplicação()">*</button>
+    <button onclick="Divisão()">/</button>
+
     <p id="resultado">resultado</p>
+
     <script>
-        function soma() {
+        function Soma() {
             var pagina = document;
 
             var campo1 = pagina.getElementById('campo1').value;
             var campo2 = pagina.getElementById('campo2').value;
             var resultado = pagina.getElementById('resultado');
 
-            if(!Number)
-            resultado.innerHTML = 'A soma dos dois valores e :' + (Number(campo1) + Number(campo2));
+            if (!Number(campo1)) {
+                resultado.innerHTML = '0 campo 1 não é um numero';
+            }
+            else if (!Number(campo2)) {
+                resultado.innerHTML = '0 campo 2 não é um numero';
+            }
+            else {
+                resultado.innerHTML = 'A soma dos dois valores é: ' + (Number(campo1) + Number(campo2));
+            }
         }
+
+        function Subtração() {
+            var pagina = document;
+
+            var campo1 = pagina.getElementById('campo1').value;
+            var campo2 = pagina.getElementById('campo2').value;
+            var resultado = pagina.getElementById('resultado');
+
+            if (!Number(campo1)) {
+                resultado.innerHTML = '0 campo 1 não é um numero';
+            }
+            else if (!Number(campo2)) {
+                resultado.innerHTML = '0 campo 2 não é um numero';
+            }
+            else {
+                resultado.innerHTML = 'A subtração dos dois valores é: ' + (Number(campo1) - Number(campo2));
+            }
+
+        }
+
+        function Multiplicação() {
+            var pagina = document;
+
+            var campo1 = pagina.getElementById('campo1').value;
+            var campo2 = pagina.getElementById('campo2').value;
+            var resultado = pagina.getElementById('resultado');
+
+            if (!Number(campo1)) {
+                resultado.innerHTML = '0 campo 1 não é um numero';
+            }
+            else if (!Number(campo2)) {
+                resultado.innerHTML = '0 campo 2 não é um numero';
+            }
+            else {
+                resultado.innerHTML = 'A Multiplicação dos dois valores é: ' + (Number(campo1) * Number(campo2));
+            }
+
+        }
+
+        function Divisão() {
+            var pagina = document;
+
+            var campo1 = pagina.getElementById('campo1').value;
+            var campo2 = pagina.getElementById('campo2').value;
+            var resultado = pagina.getElementById('resultado');
+
+            if (!Number(campo1)) {
+                resultado.innerHTML = '0 campo 1 não é um numero';
+            }
+            else if (!Number(campo2)) {
+                resultado.innerHTML = '0 campo 2 não é um numero valido para divisão';
+            }
+            else {
+                resultado.innerHTML = 'A Divisão dos dois valores é: ' + (Number(campo1) / Number(campo2)).toFixed(2);
+            }
+
+        }
+
     </script>
 </body>
 

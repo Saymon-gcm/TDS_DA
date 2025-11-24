@@ -1,7 +1,71 @@
-body{
-    text-align: center;
+@font-face {
+    font-family: 'super-mercado';
+    src: url('./Fontes/LobsterTwo-Regular.ttf');
 }
 
-li{
+
+.lista {
+
+    border-radius: 15px;
+    height: 800px;
+     margin-left: 38%;
+     margin-right: 38%;
+     background-color: rgb(250, 208, 184); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
+
+}
+
+#botao{
+    
+
+}
+
+#campo{
+     display: flex;
+    justify-content: center;
+    height: 20px;
+    width: 20;
+}
+
+.color h2{
+    font-family: 'super-mercado';
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 0px 0px;
+    font-size: 25px;
+    color: rgb(170, 0, 0); 
+}
+
+.color input {
+     display: flex;
+    justify-content: center;
+}
+
+.color {
+    background-color: rgb(247, 231, 210);
+     width: 300px; 
+    height: 600px;
+    border-radius: 15px;
+    margin: 0px;
+    padding: 0px 20px 0px 20px;
+}
+
+#linha {
+    /* display: flex; */
+    /* margin: 10px;
+
+    height: 20px;
+    width: 50px;
+    */
+} 
+
+#cesto {
+    width: 100px;
+    height: 100px;
+     margin: -20px;
+     position: relative;
 }
