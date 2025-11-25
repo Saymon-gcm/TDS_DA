@@ -1,25 +1,43 @@
-var nome = localStorage.getItem('nome');//getitem = buscar item
-var input = document.getElementById('campo'); //getelementbyid = buscar elemento
-input.value = nome;
+const dados = localStorage.getItem("dados");
+const input = document.getElementById("campo");
 
-function salvar(){
-    var nome = input.value;
+// input.value = dados;
 
-    localStorage.setItem('nome',nome);
+function salvar() {
+    pessoas.push(input.value)
+
+    const h1 = document.createElement("h1");
+
+    h1.innerHTML = input.value;
+
+    document.body.appendChild(h1);
+    SalvaNaMemoriaDoNavegador()
 }
 
-function excluir(){
-    localStorage.removeItem('nome');
-    input.value ="";
+function excluir() {
+    localStorage.removeItem("dados");
+    input.value = "";
 }
-const pessoas = ["Guilherme","Maria","Jose","Darlana","Saymon","Ariel"];
 
-function mostra{
-    console.log = (pessoas);
 
-    for(var i = 0; i <= 5; i++){
+function SalvaNaMemoriaDoNavegador(){
+    localStorage.setItem("dados", JSON.stringify(pessoas));
+}
+
+const pessoas = JSON.parse(dados);
+
+Mostra();
+
+
+function Mostra() {
+
+    console.log(pessoas);
+
+    for (var i = 0; i < pessoas.length; i++) {
         const h1 = document.createElement("h1");
+
         h1.innerHTML = pessoas[i];
+
         document.body.appendChild(h1);
     }
 }
