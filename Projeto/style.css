@@ -1,0 +1,19 @@
+body{
+    margin: 0px;
+    background-image: url("./imagens/img\ fundo\ trabalho\ lanches.jpg");
+}
+
+.topo{
+    background-color: rgb(56, 56, 56);
+    height: 90px;
+    border-radius: 60px;
+    margin: 10px; 
+    display: flex;
+}
+
+.ld-direito{
+    align-items: center;
+    margin-left: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+}
