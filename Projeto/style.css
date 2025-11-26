@@ -1,19 +1,58 @@
-body{
+body {
     margin: 0px;
+}
+
+.Lanchezada {
+    display: flex;
+    height: 200px;
+    width: 100%;
     background-image: url("./imagens/img\ fundo\ trabalho\ lanches.jpg");
 }
 
-.topo{
-    background-color: rgb(56, 56, 56);
-    height: 90px;
-    border-radius: 60px;
-    margin: 10px; 
-    display: flex;
+h1 {
+    font-size: 2vw;
 }
 
-.ld-direito{
+p {
+    font-size: 2vw;
+}
+
+.topo {
+    background-color: rgb(56, 56, 56);
+    height: 90px;
+    width: 100%;
+    border-radius: 60px;
+    margin: 10px;
+    display: flex;
+
+}
+
+.ld-esquerdo {
     align-items: center;
-    margin-left: 15px;
+    margin-left: 50px;
+    width: 50%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(255, 255, 255);
+}
+
+.perfil-botao {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.perfil-botao img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+    box-shadow: 0 4px 10px #00000040;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.perfil-botao img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px #00000060;
 }
