@@ -56,3 +56,25 @@ p {
     transform: scale(1.1);
     box-shadow: 0 6px 12px #00000060;
 }
+
+
+.cardapio {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    height: 20px;
+    width: 300px;
+    background-color: blue;
+    border-radius: 40%;
+}
+
+.comidaDisable {
+    display: none;
+}
+
+.bebidaDisable {
+    display: none;
+}
+
