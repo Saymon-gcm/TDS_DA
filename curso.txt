@@ -1,0 +1,18 @@
+git best
+
+git config --list = serve para ver a lista do git best
+git config --global user.name "Nome" = colocar o nome na lista
+git config --global user.email "email" = colocar o email do GitHub
+===========================================================================================================================
+TERMINAL (SUBIR HMTL NO GIT HUB)
+
+1-(abrir terminal na pasta feita no repositório)
+2-git status
+3-git add *
+4-git commit -m "---"(adicionar comentário obrigatório)
+5-git push(subir html para o GitHub)
+
+se estiver fazendo com alguém
+
+6-git pull
+===========================================================================================================================

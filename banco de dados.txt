@@ -1,0 +1,519 @@
+BANCO DE DADOS
+
+SGBD = sistema gerenciador de banco de dados.
+
+DADOS X INFORMAÇAO
+*dado e registro de alguma entidade:
+*ex:nome,idade,1234,abc.etc.
+
+Tabela em banco de dados
+*E uma entidade que tem atributos que são colunas que destro dessas colunas existem TUPLAS(linhas).
+*Toda entidade tem um atributo PK(Primar Key) ou em português chave primaria. ex: cpf.
+
+03/02/26
+Alter Table NomeTabela: 
+A alteração que desejamos
+ex: ADICIONAR COLUNA
+Alter Table Tab01
+Add column nomecoluna tipodedado;
+
+ex: APAGAR COLUNA
+Alter Table NomeTablela 
+Drop column NomeColuna;
+
+ex: ADICIONAR CHAVE PRIMARIA (Para adicionar primeiro deve existir a coluna selecionada)
+Alter Table NomeTabela
+Add primary Key(Nome_Coluna);
+
+ex: ADICIONAR CAHVE ESTRANGEIRA
+Alter Table Etudante
+Add Constraint Curso_JDFK
+Foreing Key(Curso_JDFK) References Curso(Curso_ID);
+
+19/02/26
+Para recuperar dados de um banco de dados usamos a instrução
+(SELECT)
+Ao especificar os nomes das colunas podemos escolher quais colunas selecionar
+
+Para retornar todas as colunas de uma tabela utilizamos um "*"
+SELECT * from cars where marca = 'volvo';
+SELECT * from cars where ano < 1975;
+SELECT * from cars where marca <> 'volvo';
+SELECT * from cars where Modelo lime 'm%';
+SELECT * from cars where marca = 'volvo' and ano = 1968;
+SELECT * from cars where marca in ('volvo','ford','mercedes');
+SELECT * from cars where marca ano between 19070 and 1980;
+                                      A      
+                                      |
+between = entre aqueles 2 valores -----
+ex: 1970 (a) 1980
+
+in = só naqueles 2 valores
+ex: 19070 (e) 1980
+
+SELECT * from cars where modelo is null;
+
+null = nulo (que e igual a 0)
+
+(like) verifica se um valor corresponde a um padrão. (case sensitive)
+(ilike) verifica se um valor corresponde a um padrão. (case insensivite)
+
+and e logico
+or ou logico
+
+23/02/26
+
+QUESTOES DO BEECROWD: SQL
+
+1) QUESTAO 	
+Sua empresa está fazendo um levantamento de quantos clientes estão cadastrados nos estados, porém, faltou levantar os dados do estado do Rio Grande do Sul.
+
+Então você deve Exibir o nome de todos os clientes cujo estado seja ‘RS’.
+
+ 
+Tabelas
+customers
+id	name	                      street	                 city	state	credit_limit
+1	Pedro Augusto da Rocha	Rua Pedro Carlos Hoffman	Porto Alegre	RS	700,00
+2	Antonio Carlos Mamel	Av. Pinheiros	Belo Horizonte	MG	3500,50
+3	Luiza Augusta Mhor	Rua Salto Grande	Niteroi	RJ	4000,00
+4	Jane Ester	Av 7 de setembro	Erechim	RS	800,00
+5	Marcos Antônio dos Santos	Av Farrapos	Porto Alegre	RS	4250,25
+ 
+Exemplo de Saída
+name
+Pedro Augusto da Rocha
+Jane Ester
+Marcos Antônio dos Santos
+
+
+RESPOSTA: select name from customers where state = 'RS';
+
+SELECIONEI O NOME DA TABELA CUSTOMERS PARA O ESTADO QUE E IGUAL A RIO GRANDE DO SUL
+(select)    (nome)          (customers)      (state)                (rs)
+
+2)QUESTAO
+A empresa fará um evento comemorando os 20 anos de mercado, e para isso faremos uma grande comemoração na cidade de Porto Alegre. Queremos também convidar todos os nossos clientes que estão cadastrados nessa cidade.
+
+O seu trabalho é nos passar os nomes e os endereços dos clientes que moram em 'Porto Alegre', para entregar os convites pessoalmente.
+
+(MESMA TABELA DA QUESTAO 1)
+
+RESPOSTA: |SELECT name, street         |
+	  |FROM customers              |
+	  |WHERE city = 'Porto Alegre';|
+
+3)QUESTAO
+O setor financeiro da empresa precisa de um relatório que mostre o código e o nome dos produtos cujo preço são menores que 10 ou maiores que 100.
+
+Esquema
+products
+Coluna	Tipo
+id (PK)	numeric
+name	varchar
+amount	numeric
+price	numeric
+ 
+Tabelas
+products
+id	name	        amount	price
+1	Two-door wardrobe	100	80
+2	Dining table	1000	560
+3	Towel holder	10000	5.50
+4	Computer desk	350	100
+5	Chair	3000	210.64
+6	Single bed	750	99
+ 
+Exemplo de Saída
+id	name
+2	Dining table
+3	Towel holder
+5	Chair
+
+RESPOSTA: |SELECT id,name                  |
+	  |from products                   |
+          |where price < 10 or price > 100;|
+
+4)QUESTAO
+O setor financeiro precisa de um relatório sobre os fornecedores dos produtos que vendemos. Os relatórios contemplam todas as categorias, mas por algum motivo, os fornecedores dos produtos cuja categoria é a executiva, não estão no relatório.
+
+Seu trabalho é retornar os nomes dos produtos e dos fornecedores cujo código da categoria é 6.
+
+Esquema
+products
+Coluna	Tipo
+id (PK)	numeric
+name	varchar
+amount	numeric
+price	numeric
+id_providers (FK)	numeric
+id_categories (FK)	numeric
+   
+providers
+Coluna	Tipo
+id (PK)	numeric
+name	varchar
+street	varchar
+city	varchar
+state	char
+   
+categories
+Coluna	Tipo
+id (PK)	numeric
+name	varchar
+ 
+Tabelas
+products
+id	name	        amount	price	id_providers	id_categories
+1	Two-door wardrobe	100	800	6	8
+2	Dining table	1000	560	1	9
+3	Towel holder	10000	25.50	5	1
+4	Computer desk	350	320.50	4	6
+5	Chair	3000	210.64	3	6
+6	Single bed	750	460	1	2
+   
+providers
+id	name	         street	            city      state
+1	Henrique	Av Brasil	Rio de Janeiro	RJ
+2	Marcelo Augusto	Rua Imigrantes	Belo Horizonte	MG
+3	Caroline Silva	Av São Paulo	Salvador	BA
+4	Guilerme Staff	Rua Central	Porto Alegre	RS
+5	Isabela Moraes	Av Juiz Grande	Curitiba	PR
+6	Francisco Accerr	Av Paulista	São Paulo	SP
+   
+categories
+id	name
+1	old stock
+2	new stock
+3	modern
+4	commercial
+5	recyclable
+6	executive
+7	superior
+8	wood
+9	super luxury
+10	vintage
+ 
+Exemplo de saída
+name	name
+Computer desk	Guilerme Staff
+Chair	Caroline Silva
+
+RESPOSTAS: |SELECT products.name, providers.name                  |
+           |FROM products                                         |
+	   |JOIN providers ON products.id_providers = providers.id|
+	   |WHERE products.id_categories = 6;                     |
+
+Explicação
+
+products.name → (nome do produto)
+
+providers.name → (nome do fornecedor)
+
+JOIN providers ON products.id_providers = providers.id → (conecta cada produto ao seu fornecedor)
+
+WHERE products.id_categories = 6 → filtra apenas produtos da categoria 6 (executive)
+------------------------------------------------------------------------------
+|JOIN → serve para juntar tabelas                                            |
+|                                                                            |
+|O JOIN permite trazer informações que estão separadas em tabelas diferentes.|
+------------------------------------------------------------------------------
+|ON → serve para definir a condição da ligação                               |
+|                                                                            |
+|O ON diz como as tabelas estão relacionadas.                                |
+------------------------------------------------------------------------------
+
+5)QUESTAO
+Quando os dados foram migrados de Banco de Dados, houve um pequeno mal-entendido por parte do antigo DBA.
+
+Seu chefe precisa que você exiba o código e o nome dos produtos, cuja categoria inicie com 'super'.
+
+Esquema
+products
+Coluna	Tipo
+id (PK)	numeric
+name	varchar
+amount	numeric
+price	numeric
+id_categories (FK)	numeric
+   
+categories
+Coluna	Tipo
+id (PK)	numeric
+name	varchar
+ 
+Tabelas
+products
+id	name	amount	price	id_categories
+1	Lampshade	100	800	4
+2	Table for painting	1000	560	9
+3	Notebook desk	10000	25.50	9
+4	Computer desk	350	320.50	6
+5	Chair	3000	210.64	9
+6	Home alarm	750	460	4
+   
+categories
+id	name
+1	old stock
+2	new stock
+3	modern
+4	commercial
+5	recyclable
+6	executive
+7	superior
+8	wood
+9	super luxury
+10	vintage
+ 
+Exemplo de Saída
+id	name
+2	Table for painting
+3	Notebook desk
+5	Chair
+
+RESPOSTA: |SELECT p.id, p.name                        |
+          |FROM products p                            |
+          |JOIN categories c ON p.id_categories = c.id|
+          |WHERE c.name LIKE 'super%';                |
+
+Explicação
+
+FROM products p → (tabela de produtos (apelido p))
+
+JOIN categories c ON p.id_categories = c.id → (conecta o produto à sua categoria)
+
+WHERE c.name LIKE 'super%' → (filtra categorias que começam com "super")
+
+% → (significa "qualquer coisa depois")
+
+26/02/26
+BEECROWD
+
+6)QUESTAO
+Todos os meses a empresa pede um relatório das cidades que os fornecedores estão cadastrados. Dessa vez não vai ser diferente, faça uma consulta no Banco de Dados que retorne todas as cidades dos fornecedores, mas em ordem alfabética.
+
+OBS: Você não deve mostrar cidades repetidas.
+
+Esquema
+providers
+Coluna	Tipo
+id (PK)	numeric
+name	varchar
+street	varchar
+city	varchar
+state	char
+ 
+Tabelas
+providers
+id	name	street	city	state
+1	Henrique	Av Brasil	Rio de Janeiro	RJ
+2	Marcelo Augusto	Rua Imigrantes	Belo Horizonte	MG
+3	Caroline Silva	Av São Paulo	Salvador	BA
+4	Guilerme Staff	Rua Central	Porto Alegre	RS
+5	Isabela Moraes	Av Juiz Grande	Curitiba	PR
+6	Francisco Accerr	Av Paulista	São Paulo	SP
+ 
+Exemplo de saída
+city
+Belo Horizonte
+Curitiba
+Porto Alegre
+Rio de Janeiro
+Salvador
+São Paulo
+
+RESPOSTA: |SELECT DISTINCT city|
+          |FROM providers      |
+          |ORDER BY city ASC;  |
+
+Explicação:
+
+SELECT DISTINCT city → (evita cidades duplicadas)
+
+FROM providers → (tabela dos fornecedores)
+
+ORDER BY city ASC → (ordena alfabeticamente (ASC é padrão, mas é bom deixar explícito))
+
+ASC significa Ascending (ordem crescente).
+
+No ORDER BY, ele define como os dados serão organizados.
+
+|-------------------------|
+|Tipos de ordenação:      |
+|                         |
+|ASC → Ordem crescente    |
+|                         |
+|A → Z                    |
+|                         |
+|0 → 9                    |
+|                         |
+|Datas antigas → recentes |
+|                         |
+|DESC → Ordem decrescente |
+|                         |
+|Z → A                    |
+|                         |
+|9 → 0                    |
+|                         |
+|Datas recentes → antigas |
+|-------------------------|
+
+7)QUESTAO
+O setor financeiro da nossa empresa, está querendo saber os menores e maiores valores dos produtos, que vendemos.
+
+Para isso exiba somente o maior e o menor preço da tabela produtos.
+
+Esquema
+products
+Coluna	Tipo
+id (PK)	numeric
+name	varchar
+amount	numeric
+price	numeric
+ 
+Tabelas
+products
+id	name	amount	price
+1	Two-doors wardrobe	100	800
+2	Dining table	1000	560
+3	Towel holder	10000	25.50
+4	Computer desk	350	320.50
+5	Chair	3000	210.64
+6	Single bed	750	460
+ 
+Exemplo de Saída
+price	price
+800	25.50
+
+RESPOSTA: |SELECT              |
+          |MAX(price) AS price,|
+          |MIN(price) AS price |
+          |FROM products;      |
+
+Explicação
+
+MAX(price) → (retorna 800)
+
+MIN(price) → (retorna 25.50)
+
+AS price → (mantém o nome da coluna como no exemplo pedido)
+
+|------------------------------------------------------------------|
+|Para pegar o maior e o menor preço**, usamos funções de agregação:|
+|                                                                  |
+|MAX() → maior valor                                               |
+|                                                                  |
+|MIN() → menor valor                                               |
+|------------------------------------------------------------------| 
+
+8)QUESTAO
+Como de costume o setor de vendas está fazendo uma análise de quantos produtos temos em estoque, e você poderá ajudar eles.
+
+Então seu trabalho será exibir o nome e a quantidade de produtos de cada uma categoria.
+
+Esquema
+products
+Coluna	Tipo
+id (PK)	numeric
+name	varchar
+amount	numeric
+price	numeric
+id_categories (FK)	numeric
+   
+categories
+Coluna	Tipo
+id (PK)	numeric
+name	varchar
+ 
+Tabelas
+products
+id	name	amount	price	id_categories
+1	Two-doors wardrobe	100	800	1
+2	Dining table	1000	560	3
+3	Towel holder	10000	25.50	4
+4	Computer desk	350	320.50	2
+5	Chair	3000	210.64	4
+6	Single bed	750	460	1
+   
+categories
+id	name
+1	wood
+2	luxury
+3	vintage
+4	modern
+5	super luxury
+ 
+Exemplo de saída
+name	sum
+luxury	350
+modern	13000
+wood	850
+vintage	1000
+
+RESPOSTA: |SELECT                                     |
+          |c.name,                                    |
+          |SUM(p.amount) AS sum                       |
+          |FROM products p                            |
+          |JOIN categories c ON p.id_categories = c.id|
+          |GROUP BY c.name                            |
+          |ORDER BY c.name;                           |
+
+Explicação
+
+JOIN → une produtos com suas categorias
+
+ON p.id_categories = c.id → (condição da ligação)
+
+SUM(p.amount) → (soma as quantidades)
+
+GROUP BY c.name → (agrupa por categoria)
+
+ORDER BY c.name → (organiza em ordem alfabética)
+
+9)QUESTAO
+Na empresa que você trabalha está sendo feito um levantamento sobre os valores dos produtos que são comercializados.
+
+Para ajudar o setor que está fazendo esse levantamento você deve calcular e exibir o valor médio do preço dos produtos.
+
+OBS: Mostrar o valor com dois números após o ponto.
+
+Esquema
+products
+Coluna	Tipo
+id (PK)	numeric
+name	varchar
+amount	numeric
+price	numeric
+ 
+Tabelas
+products
+id	name	amount	price
+1	Two-doors wardrobe	100	800
+2	Dining table	1000	560
+3	Towel holder	10000	25.50
+4	Computer desk	350	320.50
+5	Chair	3000	210.64
+6	Single bed	750	460
+ 
+Exemplo de saída
+price
+396.10
+
+RESPOSTA: |SELECT                          |
+          |ROUND(AVG(p1.price), 2) AS price|
+          |FROM products p1                |
+          |INNER JOIN products p2          |
+          |ON p1.id = p2.id;               |
+
+Explicação:
+|-----------------------------------------------------------------------|
+|INNER JOIN une registros que possuem correspondência.                  |
+|                                                                       |
+|Aqui estamos ligando a tabela nela mesma (p1 com p2) pelo id.          |
+|                                                                       |
+|O resultado continua o mesmo porque cada produto só encontra ele mesmo.|
+|                                                                       |
+|AVG(p1.price) calcula a média.                                         |
+|                                                                       |
+|ROUND(..., 2) mantém duas casas decimais.                              |
+|-----------------------------------------------------------------------|
