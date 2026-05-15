@@ -18,20 +18,15 @@
         {
              $this->saldo=$valor;
         }
-
-        public function retunSaldo()
-        {
-        }
-
         public function returnDepositar()
         {
-            return "Senhor "$this->nome"<br />".
-            "Seu valor depositado foi = "$this->saldo"<br />".
+            return "Senhor ".$this->nome."<br />".
+            "Seu valor depositado foi = ".$this->saldo."<br />";
         }
         public function returnSacar()
         {
-            return "Senhor "$this->nome"<br />".
-            "Seu valor sacado foi= "$this->saldo"<br />";
+            return "Senhor ".$this->nome."<br />".
+            "Seu valor sacado foi= ".$this->saldo."<br />";
         }
     }
 ?>
@@ -47,12 +42,9 @@
         <label>nome:</label>
         <input type="text" name="nome" />
         <br />
-        <label>depositar:</label>
         <input type="number" name="depositar" />
         <br />
         <input type="submit" name="enviar" value="depositar" />
-        <label>sacar:</label>
-        <input type="number" name="sacar" />
         <br />
         <input type="submit" name="enviar" value="sacar" />
     </form>
