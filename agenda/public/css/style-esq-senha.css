@@ -1,0 +1,91 @@
+body{
+    margin: 0px;
+}
+
+.login-cabecalho{
+    display: flex;
+    width: 281,5px;
+    height: 1239px;
+}
+
+.login-lado-esquerdo{
+    background-image: url("img/logo-plano-d-fundo.png");
+    width: 65%;
+    height: 1239px;
+    display: flex;
+    background-repeat: no-repeat;
+}
+.logo-pt1 h1{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 35, 133);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    margin-top: 800px;
+    margin-left: 540px;
+}
+.logo-pt2 h1{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(71, 128, 235);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    margin-top: 800px;
+}
+.login h1{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 35, 133);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    margin-left: 320px;
+    margin-top: 100px;
+}
+.login-nome-email {
+    position: relative;
+    width: 100%;
+}
+.login-nome-email img {
+    position: absolute;
+    left: 140px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+}
+.login-nome-email input{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid rgb(0, 35, 133);
+    height: 50px;
+    width: 100%;
+    border-radius: 70px;
+    color:black;
+    cursor: pointer;
+    margin-left: 160px;
+    font-weight: normal;
+    font-size: 20px;
+    margin-top: 380px;
+    margin-left: 130px;
+    padding: 10px 10px 10px 40px;
+}
+.login-botao button{
+    height: 100px;
+    width: 250px;
+    border-radius: 70px;
+    background-color: rgb(0, 35, 133);
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 200px;
+    margin-left: 310px;
+    cursor: pointer;
+}
