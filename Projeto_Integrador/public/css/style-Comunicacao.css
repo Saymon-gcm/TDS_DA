@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+
+/* ==================================================
+   CONFIGURAÇÕES GERAIS
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 100%;
+
+    font-family: "Google Sans", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==================================================
+   ESTRUTURA PRINCIPAL
+================================================== */
+
+.cabecalho {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(71, 128, 235);
+}
+
+
+/* ==================================================
+   CABEÇALHO SUPERIOR
+================================================== */
+
+.cabecalho-up {
+    width: 100%;
+    min-height: 95px;
+
+    background-color: rgb(53, 103, 196);
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 25px;
+}
+
+
+/* ==================================================
+   TÍTULO AUTIWORLD
+================================================== */
+
+.cabecalho-up h1 {
+    margin: 0;
+
+    font-size: 50px;
+
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   NOTIFICAÇÃO
+================================================== */
+
+.notificao {
+    margin-left: auto;
+}
+
+.notificao button {
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+
+/* ==================================================
+   PERFIL
+================================================== */
+
+.perfil {
+    width: 70px;
+    height: 70px;
+
+    margin-left: 25px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border: 3px solid #3B82F6;
+
+    flex-shrink: 0;
+}
+
+.perfil img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   MENU DO PERFIL
+================================================== */
+
+.menu-perfil {
+    display: none;
+
+    position: absolute;
+
+    top: 90px;
+    right: 20px;
+
+    width: 190px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+
+    overflow: hidden;
+
+    z-index: 999;
+}
+
+.menu-perfil a {
+    display: block;
+
+    padding: 15px;
+
+    color: #1E3A8A;
+
+    font-size: 16px;
+
+    transition: .3s;
+}
+
+.menu-perfil a:hover {
+    background-color: #EAF4FF;
+}
+
+
+/* ==================================================
+   CAIXA DE NOTIFICAÇÃO
+================================================== */
+
+.caixa {
+    display: none;
+
+    position: absolute;
+
+    top: 90px;
+    right: 200px;
+
+    width: 180px;
+
+    min-height: 100px;
+
+    padding: 15px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+
+    color: black;
+
+    z-index: 999;
+}
+
+.mostrar {
+    display: block;
+}
+
+/* ==================================================
+   ÁREA PRINCIPAL
+================================================== */
+
+.cabecalho-down {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    padding: 35px 20px 50px;
+}
+
+
+/* ==================================================
+   ÁREA DO BOTÃO VOLTAR
+================================================== */
+
+.area-voltar {
+
+    width: 70px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding-top: 5px;
+}
+
+
+/* ==================================================
+   BOTÃO VOLTAR
+================================================== */
+
+.botao-voltar {
+
+    color: white;
+
+    font-size: 55px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* ==================================================
+   CONTAINER DOS CARDS
+================================================== */
+
+.container {
+
+    width: 100%;
+
+    max-width: 1450px;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 50px 35px;
+
+    margin: 0 auto;
+}
+
+
+/* ==================================================
+   CARDS
+================================================== */
+
+.card {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background-color: white;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    padding: 15px;
+
+    transition: transform 0.3s;
+}
+
+
+.card:hover {
+
+    transform: scale(1.05);
+}
+
+
+/* ==================================================
+   IMAGENS
+================================================== */
+
+.card img {
+
+    width: 100%;
+
+    height: calc(100% - 45px);
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* ==================================================
+   TEXTO DOS CARDS
+================================================== */
+
+.card span {
+
+    width: 100%;
+
+    height: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: black;
+}
+
+
+/* ==================================================
+   LAPTOP
+================================================== */
+
+@media (max-width: 1200px) {
+
+    .container {
+
+        grid-template-columns: repeat(5, 1fr);
+
+        gap: 40px 20px;
+    }
+
+
+    .card {
+
+        padding: 10px;
+    }
+
+
+    .card span {
+
+        font-size: 15px;
+    }
+
+
+    .cabecalho-down {
+
+        padding-left: 70px;
+
+        padding-right: 30px;
+    }
+
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .container {
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 30px;
+    }
+
+
+    .cabecalho-up h1 {
+
+        font-size: 35px;
+    }
+
+
+    .area-voltar {
+
+        width: 60px;
+    }
+
+
+    .botao-voltar {
+
+        font-size: 45px;
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 600px) {
+
+
+    /* CABEÇALHO */
+
+    .cabecalho-up {
+
+        min-height: 75px;
+
+        padding: 8px 12px;
+    }
+
+
+    .cabecalho-up h1 {
+
+        font-size: 28px;
+    }
+
+
+    /* NOTIFICAÇÃO */
+
+   .notificao {
+    margin-left: auto;
+}
+
+.notificao button {
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+
+    /* PERFIL */
+
+   .perfil {
+    width: 70px;
+    height: 70px;
+
+    margin-left: 25px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border: 3px solid #3B82F6;
+
+    flex-shrink: 0;
+}
+
+.perfil img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+    /* CAIXA DE NOTIFICAÇÃO */
+
+    .caixa {
+
+        top: 75px;
+
+        right: 60px;
+
+        width: 180px;
+    }
+
+
+    /* MENU PERFIL */
+
+    .menu-perfil {
+
+        top: 75px;
+
+        right: 10px;
+    }
+
+
+    /* ÁREA PRINCIPAL */
+
+    .cabecalho-down {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 20px 15px 40px;
+    }
+
+
+    /* BOTÃO VOLTAR */
+
+    .area-voltar {
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: flex-start;
+
+        padding: 0;
+
+        margin-bottom: 20px;
+    }
+
+
+    .botao-voltar {
+
+        font-size: 40px;
+    }
+
+
+    /* CONTAINER */
+
+    .container {
+
+        width: 100%;
+
+        max-width: 350px;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        margin: 0 auto;
+    }
+
+
+    /* CARDS */
+
+    .card {
+
+        width: 100%;
+
+        max-width: 300px;
+
+        margin: 0 auto;
+    }
+
+
+    .card span {
+
+        font-size: 16px;
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR PEQUENO
+================================================== */
+
+@media (max-width: 400px) {
+
+    .cabecalho-up h1 {
+
+        font-size: 25px;
+    }
+
+
+    .notificao button {
+
+        font-size: 27px;
+    }
+
+
+    .perfil {
+
+        width: 45px;
+
+        height: 45px;
+    }
+
+
+    .container {
+
+        max-width: 300px;
+    }
+
+
+    .card {
+
+        max-width: 280px;
+    }
+
+}

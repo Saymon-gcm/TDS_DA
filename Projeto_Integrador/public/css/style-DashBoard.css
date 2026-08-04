@@ -1,0 +1,713 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+
+/* ==================================================
+   CONFIGURAÇÕES GERAIS
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 100%;
+
+    font-family: "Google Sans", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==================================================
+   ESTRUTURA PRINCIPAL
+================================================== */
+
+.cabecalho {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(71, 128, 235);
+}
+
+
+/* ==================================================
+   CABEÇALHO SUPERIOR
+================================================== */
+
+.cabecalho-up {
+    width: 100%;
+    min-height: 95px;
+
+    background-color: rgb(53, 103, 196);
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 25px;
+}
+
+
+/* ==================================================
+   TÍTULO AUTIWORLD
+================================================== */
+
+.cabecalho-up h1 {
+    margin: 0;
+
+    font-size: 50px;
+
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   NOTIFICAÇÃO
+================================================== */
+
+.notificao {
+    margin-left: auto;
+}
+
+.notificao button {
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+
+/* ==================================================
+   PERFIL
+================================================== */
+
+.perfil {
+    width: 70px;
+    height: 70px;
+
+    margin-left: 25px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border: 3px solid #3B82F6;
+
+    flex-shrink: 0;
+}
+
+.perfil img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   MENU DO PERFIL
+================================================== */
+
+.menu-perfil {
+    display: none;
+
+    position: absolute;
+
+    top: 90px;
+    right: 20px;
+
+    width: 190px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+
+    overflow: hidden;
+
+    z-index: 999;
+}
+
+.menu-perfil a {
+    display: block;
+
+    padding: 15px;
+
+    color: #1E3A8A;
+
+    font-size: 16px;
+
+    transition: .3s;
+}
+
+.menu-perfil a:hover {
+    background-color: #EAF4FF;
+}
+
+
+/* ==================================================
+   CAIXA DE NOTIFICAÇÃO
+================================================== */
+
+.caixa {
+    display: none;
+
+    position: absolute;
+
+    top: 90px;
+    right: 200px;
+
+    width: 180px;
+
+    min-height: 100px;
+
+    padding: 15px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+
+    color: black;
+
+    z-index: 999;
+}
+
+.mostrar {
+    display: block;
+}
+
+
+/* ==================================================
+   ÁREA DOS CARDS
+================================================== */
+
+.cabecalho-down {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 45px 30px 60px;
+}
+
+
+/* ==================================================
+   GRID
+================================================== */
+
+.cards {
+    width: 100%;
+
+    max-width: 1200px;
+
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    column-gap: 25px;
+
+    row-gap: 35px;
+
+    align-items: start;
+}
+
+
+/* ==================================================
+   CARDS
+================================================== */
+
+/*
+   Cada card ocupa 2 colunas.
+
+   Linha 1:
+   Card 1 -> colunas 1 e 2
+   Card 2 -> colunas 3 e 4
+   Card 3 -> colunas 5 e 6
+
+   Linha 2:
+   Card 4 -> colunas 2 e 3
+   Card 5 -> colunas 4 e 5
+*/
+
+
+.item-card {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   POSIÇÃO DOS 3 PRIMEIROS CARDS
+================================================== */
+
+.item-card:nth-child(1) {
+    grid-column: 1 / span 2;
+}
+
+.item-card:nth-child(2) {
+    grid-column: 3 / span 2;
+}
+
+.item-card:nth-child(3) {
+    grid-column: 5 / span 2;
+}
+
+
+/* ==================================================
+   POSIÇÃO DOS 2 CARDS DE BAIXO
+================================================== */
+
+.item-card:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.item-card:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+
+/* ==================================================
+   BOTÃO
+================================================== */
+
+.card {
+    width: 100%;
+
+    max-width: 340px;
+
+    aspect-ratio: 1 / 1;
+
+    padding: 0;
+
+    border: 5px solid white;
+
+    border-radius: 30px;
+
+    background-color: #3A9DFF;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    transition: transform 0.3s;
+}
+
+.card-2{
+   width: 100%;
+
+    max-width: 340px;
+
+    aspect-ratio: 1 / 1;
+
+    padding: 0;
+
+    border: 5px solid white;
+
+    border-radius: 30px;
+
+    background-color: #8b0000;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+.card-2:hover {
+    transform: scale(1.05);
+}
+
+/* ==================================================
+   IMAGEM
+================================================== */
+
+.card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.card-2 img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* ==================================================
+   TEXTO DOS CARDS
+================================================== */
+
+.item-card p {
+    width: 100%;
+
+    margin: 12px 0 0;
+
+    font-size: 24px;
+
+    font-weight: normal;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   LAPTOP
+   ATÉ 1200px
+================================================== */
+
+@media (max-width: 1200px) {
+
+    .cabecalho-up {
+        min-height: 85px;
+
+        padding: 10px 20px;
+    }
+
+
+    .cabecalho-up h1 {
+        font-size: 42px;
+    }
+
+
+    .notificao button {
+        font-size: 40px;
+    }
+
+
+    .perfil {
+        width: 65px;
+        height: 65px;
+
+        margin-left: 20px;
+    }
+
+
+    .cabecalho-down {
+        padding: 35px 25px 50px;
+    }
+
+
+    .cards {
+        max-width: 1000px;
+
+        column-gap: 20px;
+
+        row-gap: 30px;
+    }
+
+
+    .card {
+        max-width: 280px;
+    }
+
+
+    .item-card p {
+        font-size: 21px;
+    }
+
+}
+
+
+/* ==================================================
+   TABLET
+   ATÉ 900px
+================================================== */
+
+@media (max-width: 900px) {
+
+    .cabecalho-up h1 {
+        font-size: 35px;
+    }
+
+
+    .notificao button {
+        font-size: 35px;
+    }
+
+
+    .perfil {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    /*
+       Tablet:
+       2 cards por linha
+    */
+
+    .cards {
+
+        max-width: 700px;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 35px 30px;
+    }
+
+
+    /*
+       Remove o posicionamento
+       de desktop
+    */
+
+    .item-card:nth-child(1),
+    .item-card:nth-child(2),
+    .item-card:nth-child(3),
+    .item-card:nth-child(4),
+    .item-card:nth-child(5) {
+
+        grid-column: auto;
+
+    }
+
+
+    .card {
+        max-width: 300px;
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+   ATÉ 600px
+================================================== */
+
+@media (max-width: 600px) {
+
+    .cabecalho-up {
+
+        min-height: 75px;
+
+        padding: 8px 12px;
+
+    }
+
+
+    .cabecalho-up h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .notificao button {
+
+        font-size: 30px;
+
+    }
+
+
+    .perfil {
+
+        width: 50px;
+
+        height: 50px;
+
+        margin-left: 10px;
+
+    }
+
+
+    .caixa {
+
+        top: 75px;
+
+        right: 60px;
+
+        width: 180px;
+
+    }
+
+
+    .menu-perfil {
+
+        top: 75px;
+
+        right: 10px;
+
+    }
+
+
+    .cabecalho-down {
+
+        padding: 25px 15px 40px;
+
+    }
+
+
+    /*
+       Celular:
+       1 card por linha
+    */
+
+    .cards {
+
+        width: 100%;
+
+        max-width: 400px;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+
+    /*
+       Remove todas as posições
+       especiais do desktop
+    */
+
+    .item-card:nth-child(1),
+    .item-card:nth-child(2),
+    .item-card:nth-child(3),
+    .item-card:nth-child(4),
+    .item-card:nth-child(5) {
+
+        grid-column: auto;
+
+    }
+
+
+    .card {
+
+        width: 100%;
+
+        max-width: 350px;
+
+    }
+
+
+    .item-card p {
+
+        margin-top: 10px;
+
+        font-size: 18px;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR PEQUENO
+   ATÉ 400px
+================================================== */
+
+@media (max-width: 400px) {
+
+    .cabecalho-up h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .notificao button {
+
+        font-size: 27px;
+
+    }
+
+
+    .perfil {
+
+        width: 45px;
+
+        height: 45px;
+
+    }
+
+
+    .cabecalho-down {
+
+        padding: 20px 12px 35px;
+
+    }
+
+
+    .cards {
+
+        gap: 25px;
+
+    }
+
+
+    .card {
+
+        max-width: 300px;
+
+    }
+
+
+    .item-card p {
+
+        font-size: 17px;
+
+    }
+
+}

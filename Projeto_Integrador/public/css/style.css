@@ -1,0 +1,821 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+
+/* ==================================================
+   CONFIGURAÇÃO GERAL
+================================================== */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+html,
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    min-height: 100%;
+
+    font-family: "Google Sans", sans-serif;
+
+}
+
+
+body {
+
+    overflow-x: hidden;
+
+}
+
+
+/* ==================================================
+   TELA PRINCIPAL
+================================================== */
+
+.login-cabecalho {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    background-color: rgb(71, 128, 235);
+
+}
+
+
+/* ==================================================
+   LADO ESQUERDO
+================================================== */
+
+.login-lado-esquerdo {
+
+    width: 60%;
+
+    min-height: 100vh;
+
+    background-image: url("img/logo-plano-d-fundo.png");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: cover;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    padding-bottom: 80px;
+
+}
+
+
+/* ==================================================
+   LOGO AUTI
+================================================== */
+
+.logo-pt1 h1 {
+
+    margin: 0;
+
+    color: rgb(0, 35, 133);
+
+    font-size: 100px;
+
+    font-weight: bold;
+
+}
+
+
+/* ==================================================
+   LOGO WORLD
+================================================== */
+
+.logo-pt2 h1 {
+
+    margin: 0;
+
+    color: rgb(71, 128, 235);
+
+    font-size: 100px;
+
+    font-weight: bold;
+
+}
+
+
+/* ==================================================
+   LADO DIREITO
+================================================== */
+
+.login-lado-direito {
+
+    width: 40%;
+
+    min-height: 100vh;
+
+    background-color: white;
+
+    padding: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* ==================================================
+   FORMULÁRIO
+================================================== */
+
+.login-lado-direito form {
+
+    width: 100%;
+
+    max-width: 450px;
+
+}
+
+
+/* ==================================================
+   TÍTULO LOGIN
+================================================== */
+
+.login h1 {
+
+    margin: 0 0 45px;
+
+    color: rgb(0, 35, 133);
+
+    font-size: 55px;
+
+    text-align: center;
+
+}
+
+
+/* ==================================================
+   CAMPOS
+================================================== */
+
+.login-nome-email,
+.login-senha {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ==================================================
+   ÍCONES
+================================================== */
+
+.login-nome-email img,
+.login-senha img {
+
+    position: absolute;
+
+    left: 22px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 30px;
+
+    height: 30px;
+
+    object-fit: contain;
+
+    z-index: 2;
+
+}
+
+
+/* ==================================================
+   INPUTS
+================================================== */
+
+.login-nome-email input,
+.login-senha input {
+
+    width: 100%;
+
+    height: 65px;
+
+    padding: 10px 20px 10px 65px;
+
+    border: 4px solid rgb(0, 35, 133);
+
+    border-radius: 70px;
+
+    outline: none;
+
+    background-color: white;
+
+    color: black;
+
+    font-family: "Google Sans", sans-serif;
+
+    font-size: 18px;
+
+}
+
+
+/* ==================================================
+   LOGIN AUTOMÁTICO
+================================================== */
+
+.login-automatico {
+
+    width: 100%;
+
+    margin-top: -10px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.login-automatico label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    color: rgb(0, 35, 133);
+
+    font-size: 16px;
+
+    user-select: none;
+
+}
+
+
+.login-automatico input[type="checkbox"] {
+
+    width: 18px;
+
+    height: 18px;
+
+    margin: 0;
+
+    cursor: pointer;
+
+    accent-color: rgb(0, 35, 133);
+
+}
+
+
+/* ==================================================
+   ESQUECI SENHA
+================================================== */
+
+.esq-senha {
+
+    width: 100%;
+
+    text-align: right;
+
+    margin-top: 0;
+
+    margin-bottom: 30px;
+
+}
+
+
+.esq-senha a {
+
+    color: rgb(0, 35, 133);
+
+    font-size: 16px;
+
+    text-decoration: none;
+
+}
+
+
+.esq-senha a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ==================================================
+   BOTÃO ENTRAR
+================================================== */
+
+.login-botao {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.login-botao button {
+
+    width: 250px;
+
+    height: 70px;
+
+    border: none;
+
+    border-radius: 70px;
+
+    background-color: rgb(0, 35, 133);
+
+    color: white;
+
+    font-family: "Google Sans", sans-serif;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.login-botao button:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* ==================================================
+   CADASTRAR
+================================================== */
+
+.login-cadastrar {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 25px;
+
+}
+
+
+.Cad-user {
+
+    width: 200px;
+
+    height: 60px;
+
+    border-radius: 70px;
+
+    background-color: rgb(71, 128, 235);
+
+    color: white;
+
+    font-size: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.Cad-user:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* ==================================================
+   LAPTOP
+   ATÉ 1200px
+================================================== */
+
+@media (max-width: 1200px) {
+
+
+    .login-lado-esquerdo {
+
+        width: 55%;
+
+        padding-bottom: 60px;
+
+    }
+
+
+    .login-lado-direito {
+
+        width: 45%;
+
+        padding: 35px;
+
+    }
+
+
+    .logo-pt1 h1,
+    .logo-pt2 h1 {
+
+        font-size: 75px;
+
+    }
+
+
+    .login h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .login-lado-direito form {
+
+        max-width: 400px;
+
+    }
+
+}
+
+
+/* ==================================================
+   TABLET
+   ATÉ 900px
+================================================== */
+
+@media (max-width: 900px) {
+
+
+    .login-cabecalho {
+
+        flex-direction: column;
+
+        background-color: white;
+
+    }
+
+
+    .login-lado-esquerdo {
+
+        width: 100%;
+
+        height: 300px;
+
+        min-height: 300px;
+
+        padding-bottom: 30px;
+
+        background-position: center;
+
+    }
+
+
+    .login-lado-direito {
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 50px 30px;
+
+        background-color: white;
+
+        justify-content: flex-start;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+   ATÉ 600px
+================================================== */
+
+@media (max-width: 600px) {
+
+
+    .login-cabecalho {
+
+        width: 100%;
+
+        min-height: 100vh;
+
+        display: flex;
+
+        flex-direction: column;
+
+        background-color: white;
+
+    }
+
+
+    /* ==========================================
+       LADO ESQUERDO
+    ========================================== */
+
+    .login-lado-esquerdo {
+
+        width: 100%;
+
+        height: 200px;
+
+        min-height: 200px;
+
+        padding-bottom: 20px;
+
+        background-position: center;
+
+    }
+
+
+    /* ==========================================
+       LOGO
+    ========================================== */
+
+    .logo-pt1 h1,
+    .logo-pt2 h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    /* ==========================================
+       LADO DIREITO
+    ========================================== */
+
+    .login-lado-direito {
+
+        width: 100%;
+
+        min-height: calc(100vh - 200px);
+
+        padding: 35px 20px 40px;
+
+        background-color: white;
+
+        justify-content: flex-start;
+
+    }
+
+
+    /* ==========================================
+       FORMULÁRIO
+    ========================================== */
+
+    .login-lado-direito form {
+
+        width: 100%;
+
+        max-width: 400px;
+
+    }
+
+
+    /* ==========================================
+       TÍTULO
+    ========================================== */
+
+    .login h1 {
+
+        font-size: 38px;
+
+        margin-bottom: 30px;
+
+    }
+
+
+    /* ==========================================
+       INPUTS
+    ========================================== */
+
+    .login-nome-email input,
+    .login-senha input {
+
+        width: 100%;
+
+        height: 58px;
+
+        font-size: 16px;
+
+        border-width: 3px;
+
+        padding-left: 55px;
+
+    }
+
+
+    /* ==========================================
+       ÍCONES
+    ========================================== */
+
+    .login-nome-email img,
+    .login-senha img {
+
+        left: 18px;
+
+        width: 25px;
+
+        height: 25px;
+
+    }
+
+
+    /* ==========================================
+       LOGIN AUTOMÁTICO
+    ========================================== */
+
+    .login-automatico {
+
+        margin-top: -5px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .login-automatico label {
+
+        font-size: 15px;
+
+    }
+
+
+    .login-automatico input[type="checkbox"] {
+
+        width: 17px;
+
+        height: 17px;
+
+    }
+
+
+    /* ==========================================
+       ESQUECI SENHA
+    ========================================== */
+
+    .esq-senha {
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .esq-senha a {
+
+        font-size: 14px;
+
+    }
+
+
+    /* ==========================================
+       BOTÃO ENTRAR
+    ========================================== */
+
+    .login-botao button {
+
+        width: 100%;
+
+        max-width: 300px;
+
+        height: 60px;
+
+        font-size: 20px;
+
+    }
+
+
+    /* ==========================================
+       BOTÃO CADASTRAR
+    ========================================== */
+
+    .login-cadastrar {
+
+        margin-top: 20px;
+
+    }
+
+
+    .Cad-user {
+
+        width: 100%;
+
+        max-width: 300px;
+
+        height: 55px;
+
+        font-size: 18px;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR PEQUENO
+   ATÉ 400px
+================================================== */
+
+@media (max-width: 400px) {
+
+
+    .login-lado-esquerdo {
+
+        height: 170px;
+
+        min-height: 170px;
+
+    }
+
+
+    .logo-pt1 h1,
+    .logo-pt2 h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .login-lado-direito {
+
+        padding: 30px 15px;
+
+    }
+
+
+    .login h1 {
+
+        font-size: 32px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .login-nome-email input,
+    .login-senha input {
+
+        height: 55px;
+
+        font-size: 15px;
+
+    }
+
+
+    .login-automatico label {
+
+        font-size: 14px;
+
+    }
+
+
+    .login-botao button {
+
+        height: 55px;
+
+    }
+
+}

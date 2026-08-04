@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+
+/* ==================================================
+   CONFIGURAÇÃO GERAL
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    min-height: 100%;
+
+    font-family: "Google Sans", sans-serif;
+
+}
+
+body {
+
+    overflow-x: hidden;
+
+}
+
+
+/* ==================================================
+   TELA PRINCIPAL
+================================================== */
+
+.login-cabecalho {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    background-color: rgb(71, 128, 235);
+
+}
+
+
+/* ==================================================
+   LADO ESQUERDO
+================================================== */
+
+.login-lado-esquerdo {
+
+    width: 60%;
+
+    min-height: 100vh;
+
+    background-image: url("img/logo-plano-d-fundo.png");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: cover;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    padding-bottom: 80px;
+
+}
+
+
+/* ==================================================
+   LOGO AUTI
+================================================== */
+
+.logo-pt1 h1 {
+
+    margin: 0;
+
+    color: rgb(0, 35, 133);
+
+    font-size: 100px;
+
+    font-weight: bold;
+
+}
+
+
+/* ==================================================
+   LOGO WORLD
+================================================== */
+
+.logo-pt2 h1 {
+
+    margin: 0;
+
+    color: rgb(71, 128, 235);
+
+    font-size: 100px;
+
+    font-weight: bold;
+
+}
+
+
+/* ==================================================
+   LADO DIREITO
+================================================== */
+
+.login-lado-direito {
+
+    width: 40%;
+
+    min-height: 100vh;
+
+    background-color: white;
+
+    padding: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* ==================================================
+   FORMULÁRIO
+================================================== */
+
+.login-lado-direito form {
+
+    width: 100%;
+
+    max-width: 450px;
+
+}
+
+
+/* ==================================================
+   ÁREA DO TÍTULO
+================================================== */
+
+.login {
+
+    width: 100%;
+
+    text-align: center;
+
+}
+
+
+/* ==================================================
+   BOTÃO VOLTAR
+================================================== */
+
+.voltar {
+
+    display: block;
+
+    width: fit-content;
+
+    margin-bottom: 25px;
+
+    color: rgb(0, 35, 133);
+
+    font-size: 18px;
+
+    text-decoration: none;
+
+}
+
+
+.voltar:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ==================================================
+   TÍTULO
+================================================== */
+
+.login h1 {
+
+    margin: 0 0 35px;
+
+    color: rgb(0, 35, 133);
+
+    font-size: 45px;
+
+    text-align: center;
+
+}
+
+
+/* ==================================================
+   CAMPO DE EMAIL
+================================================== */
+
+.login-nome-email {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* ==================================================
+   ÍCONE DO EMAIL
+================================================== */
+
+.login-nome-email img {
+
+    position: absolute;
+
+    left: 22px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 30px;
+
+    height: 30px;
+
+    object-fit: contain;
+
+    z-index: 2;
+
+}
+
+
+/* ==================================================
+   INPUT
+================================================== */
+
+.login-nome-email input {
+
+    width: 100%;
+
+    height: 65px;
+
+    padding: 10px 20px 10px 65px;
+
+    border: 4px solid rgb(0, 35, 133);
+
+    border-radius: 70px;
+
+    outline: none;
+
+    background-color: white;
+
+    color: black;
+
+    font-family: "Google Sans", sans-serif;
+
+    font-size: 18px;
+
+}
+
+
+/* ==================================================
+   RECADO
+================================================== */
+
+.recado-senha {
+
+    width: 100%;
+
+    margin: 0 0 30px;
+
+    color: #333;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+}
+
+
+/* ==================================================
+   BOTÃO
+================================================== */
+
+.login-botao {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.login-botao button {
+
+    width: 250px;
+
+    height: 70px;
+
+    border: none;
+
+    border-radius: 70px;
+
+    background-color: rgb(0, 35, 133);
+
+    color: white;
+
+    font-family: "Google Sans", sans-serif;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.login-botao button:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* ==================================================
+   LAPTOP
+   ATÉ 1200px
+================================================== */
+
+@media (max-width: 1200px) {
+
+    .login-lado-esquerdo {
+
+        width: 55%;
+
+        padding-bottom: 60px;
+
+    }
+
+
+    .login-lado-direito {
+
+        width: 45%;
+
+        padding: 35px;
+
+    }
+
+
+    .logo-pt1 h1,
+    .logo-pt2 h1 {
+
+        font-size: 75px;
+
+    }
+
+
+    .login h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .login-lado-direito form {
+
+        max-width: 400px;
+
+    }
+
+}
+
+
+/* ==================================================
+   TABLET
+   ATÉ 900px
+================================================== */
+
+@media (max-width: 900px) {
+
+    .login-cabecalho {
+
+        flex-direction: column;
+
+    }
+
+
+    /* IMAGEM */
+
+    .login-lado-esquerdo {
+
+        width: 100%;
+
+        height: 300px;
+
+        min-height: 300px;
+
+        padding-bottom: 30px;
+
+        background-position: center;
+
+    }
+
+
+    /* FORMULÁRIO */
+
+    .login-lado-direito {
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 50px 30px;
+
+        /*
+        Remove a borda arredondada
+        para não aparecer azul
+        */
+
+        border-radius: 0;
+
+        background-color: white;
+
+        justify-content: flex-start;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+   ATÉ 600px
+================================================== */
+
+@media (max-width: 600px) {
+
+    /* ==============================================
+       LADO ESQUERDO
+    ============================================== */
+
+    .login-lado-esquerdo {
+
+        width: 100%;
+
+        height: 200px;
+
+        min-height: 200px;
+
+        padding-bottom: 20px;
+
+    }
+
+
+    .logo-pt1 h1,
+    .logo-pt2 h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    /* ==============================================
+       LADO DIREITO
+    ============================================== */
+
+    .login-lado-direito {
+
+        width: 100%;
+
+        min-height: calc(100vh - 200px);
+
+        padding: 30px 20px 40px;
+
+        /*
+        IMPORTANTE:
+        remove completamente a borda azul
+        */
+
+        border-radius: 0;
+
+        background-color: white;
+
+        justify-content: flex-start;
+
+    }
+
+
+    /* ==============================================
+       FORMULÁRIO
+    ============================================== */
+
+    .login-lado-direito form {
+
+        width: 100%;
+
+        max-width: 400px;
+
+    }
+
+
+    /* ==============================================
+       VOLTAR
+    ============================================== */
+
+    .voltar {
+
+        font-size: 16px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    /* ==============================================
+       TÍTULO
+    ============================================== */
+
+    .login h1 {
+
+        font-size: 30px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    /* ==============================================
+       CAMPO
+    ============================================== */
+
+    .login-nome-email {
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .login-nome-email input {
+
+        width: 100%;
+
+        height: 58px;
+
+        font-size: 16px;
+
+        border-width: 3px;
+
+        padding-left: 55px;
+
+    }
+
+
+    /* ==============================================
+       ÍCONE
+    ============================================== */
+
+    .login-nome-email img {
+
+        left: 18px;
+
+        width: 25px;
+
+        height: 25px;
+
+    }
+
+
+    /* ==============================================
+       RECADO
+    ============================================== */
+
+    .recado-senha {
+
+        margin: 0 5px 25px;
+
+        font-size: 14px;
+
+        line-height: 1.4;
+
+        text-align: center;
+
+    }
+
+
+    /* ==============================================
+       BOTÃO
+    ============================================== */
+
+    .login-botao button {
+
+        width: 100%;
+
+        max-width: 300px;
+
+        height: 60px;
+
+        font-size: 18px;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR PEQUENO
+   ATÉ 400px
+================================================== */
+
+@media (max-width: 400px) {
+
+    .login-lado-esquerdo {
+
+        height: 170px;
+
+        min-height: 170px;
+
+    }
+
+
+    .logo-pt1 h1,
+    .logo-pt2 h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .login-lado-direito {
+
+        padding: 25px 15px 35px;
+
+        /*
+        Sem borda azul
+        */
+
+        border-radius: 0;
+
+    }
+
+
+    .voltar {
+
+        font-size: 15px;
+
+    }
+
+
+    .login h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .login-nome-email input {
+
+        height: 55px;
+
+        font-size: 15px;
+
+    }
+
+
+    .recado-senha {
+
+        font-size: 13px;
+
+    }
+
+
+    .login-botao button {
+
+        height: 55px;
+
+        font-size: 17px;
+
+    }
+
+}

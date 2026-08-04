@@ -1,0 +1,879 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+
+/* ==================================================
+   CONFIGURAÇÃO GERAL
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    min-height: 100%;
+
+    font-family: "Google Sans", sans-serif;
+
+}
+
+body {
+
+    overflow-x: hidden;
+
+}
+
+
+/* ==================================================
+   TELA PRINCIPAL
+================================================== */
+
+.cadastrar-cabecalho {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    background-color: rgb(71, 128, 235);
+
+}
+
+
+/* ==================================================
+   LADO ESQUERDO
+================================================== */
+
+.cadastrar-lado-esquerdo {
+
+    width: 60%;
+
+    min-height: 100vh;
+
+    background-image: url("img/logo-plano-d-fundo.png");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: cover;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    padding-bottom: 80px;
+
+}
+
+
+/* ==================================================
+   LOGO AUTI
+================================================== */
+
+.logo-pt1 h1 {
+
+    margin: 0;
+
+    color: rgb(0, 35, 133);
+
+    font-size: 100px;
+
+    font-weight: bold;
+
+}
+
+
+/* ==================================================
+   LOGO WORLD
+================================================== */
+
+.logo-pt2 h1 {
+
+    margin: 0;
+
+    color: rgb(71, 128, 235);
+
+    font-size: 100px;
+
+    font-weight: bold;
+
+}
+
+
+/* ==================================================
+   LADO DIREITO
+================================================== */
+
+.cadastrar-lado-direito {
+
+    width: 40%;
+
+    min-height: 100vh;
+
+    background-color: white;
+
+    padding: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* ==================================================
+   FORMULÁRIO
+================================================== */
+
+.cadastrar-lado-direito form {
+
+    width: 100%;
+
+    max-width: 450px;
+
+}
+
+
+/* ==================================================
+   TÍTULO E VOLTAR
+================================================== */
+
+.cadastrar {
+
+    width: 100%;
+
+    position: relative;
+
+}
+
+
+.cadastrar a {
+
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    color: rgb(0, 35, 133);
+
+    font-size: 18px;
+
+    text-decoration: none;
+
+}
+
+
+.cadastrar a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+.cadastrar h1 {
+
+    margin: 0 0 45px;
+
+    color: rgb(0, 35, 133);
+
+    font-size: 55px;
+
+    text-align: center;
+
+}
+
+
+/* ==================================================
+   CAMPOS
+================================================== */
+
+.cadastrar-nome,
+.cadastrar-email,
+.cadastrar-telefone,
+.cadastrar-senha {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ==================================================
+   ÍCONES
+================================================== */
+
+.cadastrar-nome img,
+.cadastrar-email img,
+.cadastrar-telefone > img,
+.cadastrar-senha img {
+
+    position: absolute;
+
+    left: 22px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 30px;
+
+    height: 30px;
+
+    object-fit: contain;
+
+    z-index: 3;
+
+}
+
+
+/* ==================================================
+   INPUTS - NOME, EMAIL E SENHA
+================================================== */
+
+.cadastrar-nome input,
+.cadastrar-email input,
+.cadastrar-senha input {
+
+    width: 100%;
+
+    height: 65px;
+
+    padding: 10px 20px 10px 65px;
+
+    border: 4px solid rgb(0, 35, 133);
+
+    border-radius: 70px;
+
+    outline: none;
+
+    background-color: white;
+
+    color: black;
+
+    font-family: "Google Sans", sans-serif;
+
+    font-size: 18px;
+
+}
+
+
+/* ==================================================
+   CAMPO DE TELEFONE
+================================================== */
+
+.cadastrar-telefone {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+/* ==================================================
+   ÍCONE DO TELEFONE
+================================================== */
+
+.cadastrar-telefone > img {
+
+    position: absolute;
+
+    left: 22px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 30px;
+
+    height: 30px;
+
+    object-fit: contain;
+
+    z-index: 3;
+
+}
+
+
+/* ==================================================
+   CÓDIGO DO PAÍS +55
+================================================== */
+
+.codigo-pais {
+
+    position: absolute;
+
+    left: 65px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: rgb(0, 35, 133);
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    padding-right: 12px;
+
+    border-right: 2px solid #ccc;
+
+    z-index: 3;
+
+}
+
+
+/* ==================================================
+   INPUT DO TELEFONE
+================================================== */
+
+.cadastrar-telefone input {
+
+    width: 100%;
+
+    height: 65px;
+
+    padding: 10px 20px 10px 125px;
+
+    border: 4px solid rgb(0, 35, 133);
+
+    border-radius: 70px;
+
+    outline: none;
+
+    background-color: white;
+
+    color: black;
+
+    font-family: "Google Sans", sans-serif;
+
+    font-size: 18px;
+
+}
+
+
+/* ==================================================
+   EFEITO AO CLICAR NOS INPUTS
+================================================== */
+
+.cadastrar-nome input:focus,
+.cadastrar-email input:focus,
+.cadastrar-telefone input:focus,
+.cadastrar-senha input:focus {
+
+    border-color: rgb(0, 35, 133);
+
+    box-shadow: 0 0 5px rgba(0, 35, 133, 0.3);
+
+}
+
+
+/* ==================================================
+   BOTÃO CADASTRAR
+================================================== */
+
+.cadastrar-botao {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 25px;
+
+}
+
+
+.cadastrar-botao button {
+
+    width: 250px;
+
+    height: 70px;
+
+    border: none;
+
+    border-radius: 70px;
+
+    background-color: rgb(0, 35, 133);
+
+    color: white;
+
+    font-family: "Google Sans", sans-serif;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.cadastrar-botao button:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* ==================================================
+   LAPTOP
+   ATÉ 1200px
+================================================== */
+
+@media (max-width: 1200px) {
+
+    .cadastrar-lado-esquerdo {
+
+        width: 55%;
+
+        padding-bottom: 60px;
+
+    }
+
+
+    .cadastrar-lado-direito {
+
+        width: 45%;
+
+        padding: 35px;
+
+    }
+
+
+    .logo-pt1 h1,
+    .logo-pt2 h1 {
+
+        font-size: 75px;
+
+    }
+
+
+    .cadastrar h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .cadastrar-lado-direito form {
+
+        max-width: 400px;
+
+    }
+
+}
+
+
+/* ==================================================
+   TABLET
+   ATÉ 900px
+================================================== */
+
+@media (max-width: 900px) {
+
+    .cadastrar-cabecalho {
+
+        flex-direction: column;
+
+        background-color: white;
+
+    }
+
+
+    .cadastrar-lado-esquerdo {
+
+        width: 100%;
+
+        height: 300px;
+
+        min-height: 300px;
+
+        padding-bottom: 30px;
+
+        background-position: center;
+
+    }
+
+
+    .cadastrar-lado-direito {
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 50px 30px;
+
+        background-color: white;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+   ATÉ 600px
+================================================== */
+
+@media (max-width: 600px) {
+
+    /* ==========================================
+       TELA PRINCIPAL
+    ========================================== */
+
+    .cadastrar-cabecalho {
+
+        width: 100%;
+
+        min-height: 100vh;
+
+        display: flex;
+
+        flex-direction: column;
+
+        background-color: white;
+
+    }
+
+
+    /* ==========================================
+       LADO ESQUERDO
+    ========================================== */
+
+    .cadastrar-lado-esquerdo {
+
+        width: 100%;
+
+        height: 200px;
+
+        min-height: 200px;
+
+        padding-bottom: 20px;
+
+        background-position: center;
+
+    }
+
+
+    /* ==========================================
+       LOGO
+    ========================================== */
+
+    .logo-pt1 h1,
+    .logo-pt2 h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    /* ==========================================
+       LADO DIREITO
+    ========================================== */
+
+    .cadastrar-lado-direito {
+
+        width: 100%;
+
+        min-height: calc(100vh - 200px);
+
+        padding: 35px 20px 40px;
+
+        background-color: white;
+
+        justify-content: flex-start;
+
+    }
+
+
+    /* ==========================================
+       FORMULÁRIO
+    ========================================== */
+
+    .cadastrar-lado-direito form {
+
+        width: 100%;
+
+        max-width: 400px;
+
+    }
+
+
+    /* ==========================================
+       VOLTAR
+    ========================================== */
+
+    .cadastrar a {
+
+        margin-bottom: 20px;
+
+        font-size: 16px;
+
+    }
+
+
+    /* ==========================================
+       TÍTULO
+    ========================================== */
+
+    .cadastrar h1 {
+
+        font-size: 38px;
+
+        margin-bottom: 30px;
+
+    }
+
+
+    /* ==========================================
+       CAMPOS
+    ========================================== */
+
+    .cadastrar-nome,
+    .cadastrar-email,
+    .cadastrar-telefone,
+    .cadastrar-senha {
+
+        width: 100%;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    /* ==========================================
+       INPUTS
+    ========================================== */
+
+    .cadastrar-nome input,
+    .cadastrar-email input,
+    .cadastrar-senha input {
+
+        width: 100%;
+
+        height: 58px;
+
+        font-size: 16px;
+
+        border-width: 3px;
+
+        padding-left: 55px;
+
+    }
+
+
+    /* ==========================================
+       INPUT DE TELEFONE
+    ========================================== */
+
+    .cadastrar-telefone input {
+
+        width: 100%;
+
+        height: 58px;
+
+        font-size: 16px;
+
+        border-width: 3px;
+
+        padding-left: 105px;
+
+    }
+
+
+    /* ==========================================
+       ÍCONES
+    ========================================== */
+
+    .cadastrar-nome img,
+    .cadastrar-email img,
+    .cadastrar-senha img {
+
+        left: 18px;
+
+        width: 25px;
+
+        height: 25px;
+
+    }
+
+
+    /* ==========================================
+       ÍCONE DE TELEFONE
+    ========================================== */
+
+    .cadastrar-telefone > img {
+
+        left: 18px;
+
+        width: 25px;
+
+        height: 25px;
+
+    }
+
+
+    /* ==========================================
+       CÓDIGO +55 NO CELULAR
+    ========================================== */
+
+    .codigo-pais {
+
+        left: 55px;
+
+        font-size: 16px;
+
+        padding-right: 10px;
+
+    }
+
+
+    /* ==========================================
+       BOTÃO
+    ========================================== */
+
+    .cadastrar-botao {
+
+        margin-top: 10px;
+
+    }
+
+
+    .cadastrar-botao button {
+
+        width: 100%;
+
+        max-width: 300px;
+
+        height: 60px;
+
+        font-size: 18px;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR PEQUENO
+   ATÉ 400px
+================================================== */
+
+@media (max-width: 400px) {
+
+    .cadastrar-lado-esquerdo {
+
+        height: 170px;
+
+        min-height: 170px;
+
+    }
+
+
+    .logo-pt1 h1,
+    .logo-pt2 h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .cadastrar-lado-direito {
+
+        padding: 30px 15px;
+
+    }
+
+
+    .cadastrar a {
+
+        font-size: 15px;
+
+    }
+
+
+    .cadastrar h1 {
+
+        font-size: 32px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    /* ==========================================
+       INPUTS PEQUENOS
+    ========================================== */
+
+    .cadastrar-nome input,
+    .cadastrar-email input,
+    .cadastrar-senha input {
+
+        height: 55px;
+
+        font-size: 15px;
+
+    }
+
+
+    /* ==========================================
+       TELEFONE PEQUENO
+    ========================================== */
+
+    .cadastrar-telefone input {
+
+        height: 55px;
+
+        font-size: 15px;
+
+        padding-left: 100px;
+
+    }
+
+
+    .codigo-pais {
+
+        font-size: 15px;
+
+    }
+
+
+    /* ==========================================
+       BOTÃO
+    ========================================== */
+
+    .cadastrar-botao button {
+
+        height: 55px;
+
+    }
+
+}
