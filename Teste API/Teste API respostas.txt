@@ -1,0 +1,161 @@
+Teste API
+
+Exercício-1
+
+1:R-GET, POST, PUT, PATCH, DELETE
+
+2:R-Apenas o GET não retorna, o resto retorna normalmente,
+
+3:
+*id na url:
+R-GET, DELETE
+
+*dados body:
+R-POST
+
+*ambos:
+R-PATCH, PUT
+
+Exercício-2
+
+*Teste 1
+(print)
+
+*Teste 2
+(print)
+
+Exercício-3
+
+*Teste 3
+(print)
+
+*Teste 4
+(print)
+
+Exercício-4
+
+*Teste 5
+(print)
+
+*Teste 6 
+(print)
+
+*Teste 7
+(print)
+
+Exercício-5
+
+*Teste-8
+(Print)
+
+*Teste-9
+(print)
+
+Exercício-6
+
+*Teste-10
+(print)
+
+*Teste-11
+(print)
+
+Exercício-7
+
+*Teste-12
+(print)
+
+*Teste-13
+(print)
+
+Exercícios-8
+
+1)
+GET: serve para consultar ou buscar informações.
+POST: serve para cadastrar ou criar uma nova informação.
+PUT: serve para atualizar os dados de um registro.
+PATCH: serve para alterar apenas uma parte dos dados.
+DELETE: serve para excluir um registro
+
+2)
+O PUT atualiza o registro de forma completa, enquanto o PATCH altera somente uma informação específica.
+
+3)
+Porque o ID identifica qual usuário será excluído. No caso do exercício, o usuário é identificado pelo id=1
+
+4)
+Porque o 201 indica que um novo registro foi criado. O 200 indica apenas que a operação foi realizada com sucesso.
+
+5)
+PARTE 8 – TABELA DE TESTES
+
+CT05
+Método HTTP: POST
+URL: http://localhost/api/api.php
+Código Retornado: 201
+Resultado Esperado: Cadastrar um novo usuário.
+Resultado Obtido: Usuário cadastrado com sucesso.
+Status: Passou
+
+CT06
+Método HTTP: PUT
+URL: http://localhost/api/api.php?id=10
+Código Retornado: 200
+Resultado Esperado: Atualizar todos os dados do usuário 10.
+Resultado Obtido: Dados do usuário atualizados.
+Status: Passou
+
+CT07
+Método HTTP: PUT
+URL: http://localhost/api/api.php
+Código Retornado: 400
+Resultado Esperado: Não permitir atualização sem informar o ID.
+Resultado Obtido: Sistema informou que o ID é necessário.
+Status: Passou
+
+CT08
+Método HTTP: PUT
+URL: http://localhost/api/api.php?id=999
+Código Retornado: 404
+Resultado Esperado: Informar que o usuário não existe.
+Resultado Obtido: Usuário não encontrado.
+Status: Passou
+
+CT09
+Método HTTP: PATCH
+URL: http://localhost/api/api.php?id=10
+Código Retornado: 200
+Resultado Esperado: Atualizar parcialmente o usuário 10.
+Resultado Obtido: Dado informado foi atualizado.
+Status: Passou
+
+CT10
+Método HTTP: PATCH
+URL: http://localhost/api/api.php
+Código Retornado: 400
+Resultado Esperado: Não permitir atualização sem informar o ID.
+Resultado Obtido: Sistema informou que o ID é necessário.
+Status: Passou
+
+CT11
+Método HTTP: DELETE
+URL: http://localhost/api/api.php?id=10
+Código Retornado: 200
+Resultado Esperado: Excluir o usuário 10.
+Resultado Obtido: Usuário excluído com sucesso.
+Status: Passou
+
+CT12
+Método HTTP: DELETE
+URL: http://localhost/api/api.php?id=999
+Código Retornado: 404
+Resultado Esperado: Informar que o usuário não existe.
+Resultado Obtido: Usuário não encontrado.
+Status: Passou
+
+CT13
+Método HTTP: DELETE
+URL: http://localhost/api/api.php
+Código Retornado: 400
+Resultado Esperado: Não permitir exclusão sem informar o ID.
+Resultado Obtido: Sistema informou que o ID é necessário.
+Status: Passou
