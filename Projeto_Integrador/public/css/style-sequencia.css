@@ -1,0 +1,951 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+
+/* ==================================================
+   CONFIGURAÇÕES GERAIS
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 100%;
+
+    background-color: rgb(71, 128, 235);
+
+}
+
+
+body {
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: "Google Sans", sans-serif;
+
+    background-color: rgb(71, 128, 235);
+
+    overflow-x: hidden;
+
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==================================================
+   ESTRUTURA PRINCIPAL
+================================================== */
+
+.cabecalho {
+
+    width: 100%;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background-color: rgb(71, 128, 235);
+
+}
+
+
+/* ==================================================
+   CABEÇALHO
+================================================== */
+
+.cabecalho-up {
+
+    width: 100%;
+
+    min-height: 95px;
+
+    background-color: rgb(53, 103, 196);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 10px 25px;
+
+}
+
+
+.cabecalho-up h1 {
+
+    margin: 0;
+
+    font-size: 50px;
+
+    white-space: nowrap;
+
+}
+
+
+/* ==================================================
+   NOTIFICAÇÃO
+================================================== */
+
+.notificao {
+    margin-left: auto;
+}
+
+
+.notificao button {
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    padding: 0;
+
+}
+
+
+/* ==================================================
+   PERFIL
+================================================== */
+
+.perfil {
+
+    width: 70px;
+    height: 70px;
+
+    margin-left: 25px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border: 3px solid #3B82F6;
+
+    flex-shrink: 0;
+
+}
+
+
+.perfil img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* ==================================================
+   MENU PERFIL
+================================================== */
+
+.menu-perfil {
+
+    display: none;
+
+    position: absolute;
+
+    top: 90px;
+    right: 20px;
+
+    width: 190px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+
+    overflow: hidden;
+
+    z-index: 999;
+
+}
+
+
+.menu-perfil a {
+
+    display: block;
+
+    padding: 15px;
+
+    color: #1E3A8A;
+
+    font-size: 16px;
+
+    transition: .3s;
+
+}
+
+
+.menu-perfil a:hover {
+
+    background-color: #EAF4FF;
+
+}
+
+
+/* ==================================================
+   CAIXA DE NOTIFICAÇÃO
+================================================== */
+
+.caixa {
+
+    display: none;
+
+    position: absolute;
+
+    top: 90px;
+
+    right: 200px;
+
+    width: 180px;
+
+    min-height: 100px;
+
+    padding: 15px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+
+    color: black;
+
+    z-index: 999;
+
+}
+
+
+.mostrar {
+    display: block;
+}
+
+
+/* ==================================================
+   ÁREA PRINCIPAL
+================================================== */
+
+.cabecalho-down {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    padding: 30px 20px 50px;
+
+}
+
+
+/* ==================================================
+   BOTÃO VOLTAR
+================================================== */
+
+.area-voltar {
+
+    width: 70px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding-top: 5px;
+
+}
+
+
+.botao-voltar {
+
+    color: white;
+
+    font-size: 55px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* ==================================================
+   JOGO
+================================================== */
+
+.jogo-sequencia {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: white;
+
+}
+
+
+.jogo-sequencia h2 {
+
+    margin: 0;
+
+    font-size: 42px;
+
+}
+
+
+.instrucao {
+
+    margin: 5px 0 25px;
+
+    font-size: 19px;
+
+}
+
+
+/* ==================================================
+   INFORMAÇÕES
+================================================== */
+
+.informacoes {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 70px;
+
+    margin-bottom: 25px;
+
+    font-size: 18px;
+
+}
+
+
+/* ==================================================
+   SEQUÊNCIA
+================================================== */
+
+.sequencia {
+
+    width: 100%;
+
+    max-width: 750px;
+
+    min-height: 180px;
+
+    margin: 0 auto 25px;
+
+    padding: 20px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    box-shadow:
+        0 7px 15px rgba(0, 0, 0, .18);
+
+}
+
+
+/* ==================================================
+   ITEM DA SEQUÊNCIA
+================================================== */
+
+.item-sequencia {
+
+    width: 110px;
+
+    height: 110px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 65px;
+
+    font-weight: bold;
+
+    background-color: #EAF4FF;
+
+    color: rgb(0, 35, 133);
+
+}
+
+
+/* ==================================================
+   INTERROGAÇÃO
+================================================== */
+
+.item-sequencia.faltando {
+
+    background-color: #E8EEF5;
+
+    color: rgb(53, 103, 196);
+
+}
+
+
+/* ==================================================
+   PERGUNTA
+================================================== */
+
+.pergunta {
+
+    margin: 0 0 15px;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+}
+
+
+/* ==================================================
+   OPÇÕES
+================================================== */
+
+.opcoes-sequencia {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 0 auto 20px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.opcao-sequencia {
+
+    width: 100%;
+
+    max-width: 180px;
+
+    aspect-ratio: 1 / 1;
+
+    margin: 0 auto;
+
+    border: none;
+
+    border-radius: 22px;
+
+    background-color: white;
+
+    color: rgb(0, 35, 133);
+
+    font-family: "Google Sans", sans-serif;
+
+    font-size: 65px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, .15);
+
+    transition:
+        transform .2s,
+        background-color .2s;
+
+}
+
+
+.opcao-sequencia:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+.opcao-sequencia.correta {
+
+    background-color: #22c55e;
+
+    color: white;
+
+}
+
+
+.opcao-sequencia.errada {
+
+    background-color: #ef4444;
+
+    color: white;
+
+}
+
+
+.opcao-sequencia:disabled {
+
+    cursor: default;
+
+}
+
+
+/* ==================================================
+   FEEDBACK
+================================================== */
+
+.feedback {
+
+    min-height: 35px;
+
+    margin-bottom: 10px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+
+.feedback.acerto {
+
+    color: #d9ffdd;
+
+}
+
+
+.feedback.erro {
+
+    color: #ffe0e0;
+
+}
+
+
+/* ==================================================
+   BOTÃO PRÓXIMA
+================================================== */
+
+.botao-proxima {
+
+    display: none;
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding: 13px 35px;
+
+    background-color: rgb(0, 35, 133);
+
+    color: white;
+
+    font-family: "Google Sans", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.botao-proxima:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* ==================================================
+   RESULTADO
+================================================== */
+
+.resultado {
+
+    display: none;
+
+    margin: 30px auto 0;
+
+    max-width: 500px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 22px;
+
+    color: rgb(0, 35, 133);
+
+    box-shadow:
+        0 7px 20px rgba(0, 0, 0, .2);
+
+}
+
+
+.resultado h3 {
+
+    margin: 0 0 10px;
+
+    font-size: 32px;
+
+}
+
+
+.resultado p {
+
+    margin-bottom: 20px;
+
+    font-size: 18px;
+
+}
+
+
+#jogarNovamente {
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding: 12px 30px;
+
+    background-color: rgb(53, 103, 196);
+
+    color: white;
+
+    font-family: "Google Sans", sans-serif;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .cabecalho-up h1 {
+        font-size: 35px;
+    }
+
+
+    .area-voltar {
+        width: 55px;
+    }
+
+
+    .botao-voltar {
+        font-size: 45px;
+    }
+
+
+    .jogo-sequencia h2 {
+        font-size: 35px;
+    }
+
+
+    .sequencia {
+        max-width: 650px;
+        gap: 15px;
+    }
+
+
+    .item-sequencia {
+
+        width: 95px;
+        height: 95px;
+
+        font-size: 55px;
+
+    }
+
+
+    .opcao-sequencia {
+
+        max-width: 160px;
+
+        font-size: 58px;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 600px) {
+
+    .cabecalho-up {
+
+        min-height: 75px;
+
+        padding: 8px 12px;
+
+    }
+
+
+    .cabecalho-up h1 {
+        font-size: 28px;
+    }
+
+
+    .notificao button {
+        font-size: 35px;
+    }
+
+
+    .perfil {
+
+        width: 55px;
+        height: 55px;
+
+        margin-left: 15px;
+
+    }
+
+
+    .caixa {
+
+        top: 75px;
+        right: 60px;
+
+    }
+
+
+    .menu-perfil {
+
+        top: 75px;
+        right: 10px;
+
+    }
+
+
+    .cabecalho-down {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 20px 12px 35px;
+
+    }
+
+
+    .area-voltar {
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+        margin-bottom: 10px;
+
+    }
+
+
+    .botao-voltar {
+        font-size: 40px;
+    }
+
+
+    .jogo-sequencia {
+        width: 100%;
+    }
+
+
+    .jogo-sequencia h2 {
+        font-size: 29px;
+    }
+
+
+    .instrucao {
+        font-size: 16px;
+    }
+
+
+    .informacoes {
+
+        gap: 30px;
+
+        font-size: 16px;
+
+    }
+
+
+    .sequencia {
+
+        min-height: 120px;
+
+        padding: 10px;
+
+        gap: 8px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .item-sequencia {
+
+        width: 68px;
+
+        height: 68px;
+
+        border-radius: 12px;
+
+        font-size: 40px;
+
+    }
+
+
+    .pergunta {
+
+        font-size: 18px;
+
+    }
+
+
+    .opcoes-sequencia {
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 12px;
+
+    }
+
+
+    .opcao-sequencia {
+
+        max-width: 110px;
+
+        border-radius: 15px;
+
+        font-size: 40px;
+
+    }
+
+
+    .feedback {
+        font-size: 17px;
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR PEQUENO
+================================================== */
+
+@media (max-width: 400px) {
+
+    .cabecalho-up h1 {
+        font-size: 25px;
+    }
+
+
+    .notificao button {
+        font-size: 30px;
+    }
+
+
+    .perfil {
+
+        width: 45px;
+        height: 45px;
+
+    }
+
+
+    .jogo-sequencia h2 {
+        font-size: 26px;
+    }
+
+
+    .sequencia {
+
+        gap: 5px;
+
+    }
+
+
+    .item-sequencia {
+
+        width: 58px;
+        height: 58px;
+
+        font-size: 34px;
+
+    }
+
+
+    .opcoes-sequencia {
+
+        gap: 8px;
+
+    }
+
+
+    .opcao-sequencia {
+
+        font-size: 34px;
+
+    }
+
+}

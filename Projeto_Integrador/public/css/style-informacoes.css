@@ -1,0 +1,713 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+
+/* ==================================================
+   CONFIGURAÇÕES GERAIS
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    font-family: "Google Sans", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==================================================
+   ESTRUTURA PRINCIPAL
+================================================== */
+
+.cabecalho {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(71, 128, 235);
+}
+
+
+/* ==================================================
+   CABEÇALHO SUPERIOR
+================================================== */
+
+.cabecalho-up {
+    width: 100%;
+    min-height: 95px;
+
+    background-color: rgb(53, 103, 196);
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 25px;
+
+    position: relative;
+}
+
+.cabecalho-up h1 {
+    margin: 0;
+
+    font-size: 50px;
+
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   NOTIFICAÇÃO
+================================================== */
+
+.notificao {
+    margin-left: auto;
+}
+
+.notificao button {
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+
+/* ==================================================
+   FOTO DO USUÁRIO / RESPONSÁVEL
+================================================== */
+
+.perfil {
+    width: 70px;
+    height: 70px;
+
+    margin-left: 25px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border: 3px solid #3B82F6;
+
+    flex-shrink: 0;
+}
+
+.perfil img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ==================================================
+   MENU DO PERFIL
+================================================== */
+
+.menu-perfil {
+    display: none;
+
+    position: absolute;
+
+    top: 90px;
+    right: 20px;
+
+    width: 190px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+
+    z-index: 999;
+}
+
+.menu-perfil a {
+    display: block;
+
+    padding: 15px;
+
+    color: #1E3A8A;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.menu-perfil a:hover {
+    background-color: #EAF4FF;
+}
+
+
+/* ==================================================
+   CAIXA DE NOTIFICAÇÃO
+================================================== */
+
+.caixa {
+    display: none;
+
+    position: absolute;
+
+    top: 90px;
+    right: 200px;
+
+    width: 180px;
+
+    min-height: 100px;
+
+    padding: 15px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.2);
+
+    color: black;
+
+    z-index: 999;
+}
+
+.caixa.mostrar {
+    display: block;
+}
+
+
+/* ==================================================
+   ÁREA PRINCIPAL
+================================================== */
+
+.cabecalho-down {
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    padding: 35px 20px 50px;
+
+    flex: 1;
+}
+
+
+/* ==================================================
+   ÁREA DO BOTÃO VOLTAR
+================================================== */
+
+.area-voltar {
+    width: 70px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding-top: 5px;
+}
+
+
+/* ==================================================
+   BOTÃO VOLTAR
+================================================== */
+
+.botao-voltar {
+    color: white;
+
+    font-size: 55px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: transform 0.2s;
+}
+
+.botao-voltar:hover {
+    transform: scale(1.1);
+}
+
+
+/* ==================================================
+   PÁGINA DE INFORMAÇÕES
+================================================== */
+
+.pagina-informacoes {
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 10px 20px 40px;
+}
+
+
+/* ==================================================
+   TÍTULO
+================================================== */
+
+.pagina-informacoes h2 {
+    margin: 0 0 20px 0;
+
+    color: white;
+
+    font-size: 38px;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   FOTO DO INDIVÍDUO
+================================================== */
+
+.foto-individuo {
+    width: 180px;
+    height: 180px;
+
+    margin: 10px auto 15px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 5px solid white;
+
+    background-color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.20);
+
+    flex-shrink: 0;
+}
+
+.foto-individuo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   BOTÃO ALTERAR FOTO
+================================================== */
+
+.botao-foto-individuo {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 5px;
+
+    margin-bottom: 20px;
+}
+
+.botao-editar-foto {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 13px 25px;
+
+    background-color: #2563EB;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.2s,
+        background-color 0.2s;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.botao-editar-foto:hover {
+    transform: scale(1.05);
+
+    background-color: #1D4ED8;
+}
+
+
+/* ==================================================
+   NOME DO INDIVÍDUO
+================================================== */
+
+.pagina-informacoes h3 {
+    margin: 0 0 30px 0;
+
+    color: white;
+
+    font-size: 30px;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   CAIXA DAS INFORMAÇÕES
+================================================== */
+
+.informacoes-individuo {
+    width: 100%;
+
+    max-width: 700px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    padding: 10px 30px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    overflow: hidden;
+}
+
+
+/* ==================================================
+   CAMPOS
+================================================== */
+
+.campo-informacao {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px 5px;
+
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.campo-informacao:last-child {
+    border-bottom: none;
+}
+
+
+/* ==================================================
+   TÍTULO DO CAMPO
+================================================== */
+
+.titulo-campo {
+    color: #1E3A8A;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   VALOR DO CAMPO
+================================================== */
+
+.valor-campo {
+    color: #333;
+
+    font-size: 18px;
+
+    text-align: right;
+
+    word-break: break-word;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .cabecalho-up h1 {
+        font-size: 38px;
+    }
+
+    .pagina-informacoes h2 {
+        font-size: 32px;
+    }
+
+    .area-voltar {
+        width: 60px;
+    }
+
+    .botao-voltar {
+        font-size: 45px;
+    }
+
+    .informacoes-individuo {
+        max-width: 650px;
+    }
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 600px) {
+
+    /* CABEÇALHO */
+
+    .cabecalho-up {
+        min-height: 75px;
+
+        padding: 8px 12px;
+    }
+
+    .cabecalho-up h1 {
+        font-size: 28px;
+    }
+
+
+    /* NOTIFICAÇÃO */
+
+    .notificao button {
+        font-size: 38px;
+    }
+
+
+    /* PERFIL */
+
+    .perfil {
+        width: 60px;
+        height: 60px;
+
+        margin-left: 15px;
+    }
+
+
+    /* MENU */
+
+    .menu-perfil {
+        top: 75px;
+
+        right: 10px;
+    }
+
+
+    /* NOTIFICAÇÃO */
+
+    .caixa {
+        top: 75px;
+
+        right: 60px;
+    }
+
+
+    /* ÁREA PRINCIPAL */
+
+    .cabecalho-down {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 20px 15px 40px;
+    }
+
+
+    /* BOTÃO VOLTAR */
+
+    .area-voltar {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        padding: 0;
+
+        margin-bottom: 15px;
+    }
+
+    .botao-voltar {
+        font-size: 40px;
+    }
+
+
+    /* PÁGINA */
+
+    .pagina-informacoes {
+        padding: 0 5px 30px;
+    }
+
+
+    /* TÍTULO */
+
+    .pagina-informacoes h2 {
+        font-size: 28px;
+
+        margin-bottom: 15px;
+    }
+
+
+    /* FOTO */
+
+    .foto-individuo {
+        width: 140px;
+        height: 140px;
+
+        margin-bottom: 15px;
+    }
+
+
+    /* BOTÃO */
+
+    .botao-editar-foto {
+        font-size: 16px;
+
+        padding: 11px 20px;
+    }
+
+
+    /* NOME */
+
+    .pagina-informacoes h3 {
+        font-size: 25px;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* INFORMAÇÕES */
+
+    .informacoes-individuo {
+        width: 100%;
+
+        padding: 5px 20px;
+
+        border-radius: 15px;
+    }
+
+
+    /* CAMPOS */
+
+    .campo-informacao {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 7px;
+
+        padding: 17px 5px;
+    }
+
+
+    .titulo-campo {
+        font-size: 16px;
+    }
+
+
+    .valor-campo {
+        font-size: 17px;
+
+        text-align: left;
+    }
+}
+
+
+/* ==================================================
+   CELULAR PEQUENO
+================================================== */
+
+@media (max-width: 400px) {
+
+    .cabecalho-up h1 {
+        font-size: 24px;
+    }
+
+    .notificao button {
+        font-size: 30px;
+    }
+
+    .perfil {
+        width: 48px;
+        height: 48px;
+
+        margin-left: 10px;
+    }
+
+    .pagina-informacoes h2 {
+        font-size: 24px;
+    }
+
+    .foto-individuo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .pagina-informacoes h3 {
+        font-size: 22px;
+    }
+
+    .informacoes-individuo {
+        padding: 5px 15px;
+    }
+
+}

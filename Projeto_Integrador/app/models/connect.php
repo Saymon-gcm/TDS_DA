@@ -1,0 +1,35 @@
+<?php
+    
+    class connect
+    {
+        private $host;//endereço onde o servidor esta instalado
+        private $dbname;//Nome da base de dados que iremos utilizar
+        private $password;//senha do meu banco de dados
+        private $user;//usiario do banco de dados do postgre é postgres
+        private $port;//Porta onde as conexoes do banco de dados o padrao do postgre e 5432
+
+        function __construct()
+        {
+            $this->host = "localhost";
+            $this->dbname = "Projeto_Sistema";
+            $this->password = "123456";
+            $this->user = "postgres";
+            $this->port = "5432";
+        }
+
+        public function conectarbanco()
+        {
+            try
+            {
+                $PDO = new PDO("pgsql:host=".$this->host.";port=".$this->port.";dbname=".$this->dbname,$this->user,$this->password);
+                return($PDO);
+            }
+            catch(PDOException $erro)
+            {
+                $msg = "Falha no acesso com o PostGres:".$erro->getMessage();
+                echo $msg;
+                return(NULL);
+            }
+        }
+    }
+?>

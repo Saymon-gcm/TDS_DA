@@ -1,0 +1,866 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+
+/* ==================================================
+   CONFIGURAÇÕES GERAIS
+================================================== */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    min-height: 100%;
+
+    background-color: rgb(71, 128, 235);
+
+}
+
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    font-family: "Google Sans", sans-serif;
+
+    background-color: rgb(71, 128, 235);
+
+    overflow-x: hidden;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+/* ==================================================
+   ESTRUTURA PRINCIPAL
+================================================== */
+
+.cabecalho {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100dvh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background-color: rgb(71, 128, 235);
+
+}
+
+
+/* ==================================================
+   CABEÇALHO SUPERIOR
+================================================== */
+
+.cabecalho-up {
+
+    width: 100%;
+
+    min-height: 95px;
+
+    background-color: rgb(53, 103, 196);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 10px 25px;
+
+}
+
+
+.cabecalho-up h1 {
+
+    margin: 0;
+
+    font-size: 50px;
+
+    white-space: nowrap;
+
+}
+
+
+/* ==================================================
+   NOTIFICAÇÃO
+================================================== */
+
+.notificao {
+
+    margin-left: auto;
+
+}
+
+
+.notificao button {
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    padding: 0;
+
+}
+
+
+/* ==================================================
+   PERFIL
+================================================== */
+
+.perfil {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin-left: 25px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border: 3px solid #3B82F6;
+
+    flex-shrink: 0;
+
+}
+
+
+.perfil img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* ==================================================
+   MENU PERFIL
+================================================== */
+
+.menu-perfil {
+
+    display: none;
+
+    position: absolute;
+
+    top: 90px;
+
+    right: 20px;
+
+    width: 190px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+
+    overflow: hidden;
+
+    z-index: 999;
+
+}
+
+
+.menu-perfil a {
+
+    display: block;
+
+    padding: 15px;
+
+    color: #1E3A8A;
+
+    font-size: 16px;
+
+    transition: .3s;
+
+}
+
+
+.menu-perfil a:hover {
+
+    background-color: #EAF4FF;
+
+}
+
+
+/* ==================================================
+   CAIXA DE NOTIFICAÇÃO
+================================================== */
+
+.caixa {
+
+    display: none;
+
+    position: absolute;
+
+    top: 90px;
+
+    right: 200px;
+
+    width: 180px;
+
+    min-height: 100px;
+
+    padding: 15px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+
+    color: black;
+
+    z-index: 999;
+
+}
+
+
+.mostrar {
+
+    display: block;
+
+}
+
+
+/* ==================================================
+   ÁREA PRINCIPAL
+================================================== */
+
+.cabecalho-down {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    padding: 30px 20px 50px;
+
+}
+
+
+/* ==================================================
+   BOTÃO VOLTAR
+================================================== */
+
+.area-voltar {
+
+    width: 70px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding-top: 5px;
+
+}
+
+
+.botao-voltar {
+
+    color: white;
+
+    font-size: 55px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* ==================================================
+   JOGO DA MEMÓRIA
+================================================== */
+
+.jogo-memoria {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: white;
+
+}
+
+
+.jogo-memoria h2 {
+
+    margin: 0;
+
+    font-size: 42px;
+
+}
+
+
+.instrucao {
+
+    margin: 5px 0 25px;
+
+    font-size: 19px;
+
+}
+
+
+/* ==================================================
+   INFORMAÇÕES
+================================================== */
+
+.informacoes {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 70px;
+
+    margin-bottom: 25px;
+
+    font-size: 18px;
+
+}
+
+
+/* ==================================================
+   TABULEIRO
+================================================== */
+
+.tabuleiro {
+
+    width: 100%;
+
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+/* ==================================================
+   CARTAS
+================================================== */
+
+.carta-memoria {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background-color: rgb(53, 103, 196);
+
+    cursor: pointer;
+
+    padding: 0;
+
+    position: relative;
+
+    transition: transform .2s;
+
+}
+
+
+.carta-memoria:hover {
+
+    transform: scale(1.04);
+
+}
+
+
+/* ==================================================
+   FRENTE E VERSO
+================================================== */
+
+.carta-frente,
+.carta-verso {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    backface-visibility: hidden;
+
+}
+
+
+/* ==================================================
+   VERSO
+================================================== */
+
+.carta-verso {
+
+    background-color: rgb(53, 103, 196);
+
+    color: white;
+
+    font-size: 48px;
+
+    transform: rotateY(0deg);
+
+}
+
+
+/* ==================================================
+   FRENTE
+================================================== */
+
+.carta-frente {
+
+    background-color: white;
+
+    transform: rotateY(180deg);
+
+}
+
+
+/* ==================================================
+   IMAGEM
+================================================== */
+
+.carta-frente img {
+
+    width: 75%;
+
+    height: 75%;
+
+    object-fit: contain;
+
+}
+
+
+/* ==================================================
+   CARTA ABERTA
+================================================== */
+
+.carta-memoria.aberta .carta-verso {
+
+    transform: rotateY(180deg);
+
+}
+
+
+.carta-memoria.aberta .carta-frente {
+
+    transform: rotateY(0deg);
+
+}
+
+
+/* ==================================================
+   PAR ENCONTRADO
+================================================== */
+
+.carta-memoria.encontrada {
+
+    pointer-events: none;
+
+}
+
+
+.carta-memoria.encontrada
+.carta-frente {
+
+    box-shadow:
+        inset 0 0 0 5px #22c55e;
+
+}
+
+
+/* ==================================================
+   RESULTADO
+================================================== */
+
+.resultado {
+
+    display: none;
+
+    margin: 30px auto 0;
+
+    max-width: 500px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 22px;
+
+    color: rgb(0, 35, 133);
+
+    box-shadow:
+        0 7px 20px rgba(0, 0, 0, .2);
+
+}
+
+
+.resultado h3 {
+
+    margin: 0 0 10px;
+
+    font-size: 32px;
+
+}
+
+
+.resultado p {
+
+    margin-bottom: 20px;
+
+    font-size: 18px;
+
+}
+
+
+#jogarNovamente {
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding: 12px 30px;
+
+    background-color: rgb(53, 103, 196);
+
+    color: white;
+
+    font-family: "Google Sans", sans-serif;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .cabecalho-up h1 {
+
+        font-size: 35px;
+
+    }
+
+
+    .area-voltar {
+
+        width: 55px;
+
+    }
+
+
+    .botao-voltar {
+
+        font-size: 45px;
+
+    }
+
+
+    .jogo-memoria h2 {
+
+        font-size: 35px;
+
+    }
+
+
+    .tabuleiro {
+
+        max-width: 600px;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 15px;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 600px) {
+
+    .cabecalho-up {
+
+        min-height: 75px;
+
+        padding: 8px 12px;
+
+    }
+
+
+    .cabecalho-up h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .notificao button {
+
+        font-size: 35px;
+
+    }
+
+
+    .perfil {
+
+        width: 55px;
+
+        height: 55px;
+
+        margin-left: 15px;
+
+    }
+
+
+    .caixa {
+
+        top: 75px;
+
+        right: 60px;
+
+    }
+
+
+    .menu-perfil {
+
+        top: 75px;
+
+        right: 10px;
+
+    }
+
+
+    .cabecalho-down {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 20px 12px 35px;
+
+    }
+
+
+    .area-voltar {
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+        margin-bottom: 10px;
+
+    }
+
+
+    .botao-voltar {
+
+        font-size: 40px;
+
+    }
+
+
+    .jogo-memoria {
+
+        width: 100%;
+
+    }
+
+
+    .jogo-memoria h2 {
+
+        font-size: 29px;
+
+    }
+
+
+    .instrucao {
+
+        font-size: 16px;
+
+    }
+
+
+    .informacoes {
+
+        gap: 30px;
+
+        font-size: 16px;
+
+    }
+
+
+    .tabuleiro {
+
+        width: 100%;
+
+        max-width: 360px;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 10px;
+
+    }
+
+
+    .carta-memoria {
+
+        border-radius: 12px;
+
+    }
+
+
+    .carta-frente,
+    .carta-verso {
+
+        border-radius: 12px;
+
+    }
+
+
+    .carta-verso {
+
+        font-size: 35px;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR PEQUENO
+================================================== */
+
+@media (max-width: 400px) {
+
+    .cabecalho-up h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .notificao button {
+
+        font-size: 30px;
+
+    }
+
+
+    .perfil {
+
+        width: 45px;
+
+        height: 45px;
+
+    }
+
+
+    .jogo-memoria h2 {
+
+        font-size: 26px;
+
+    }
+
+
+    .tabuleiro {
+
+        max-width: 300px;
+
+        gap: 8px;
+
+    }
+
+
+    .carta-verso {
+
+        font-size: 30px;
+
+    }
+
+}
