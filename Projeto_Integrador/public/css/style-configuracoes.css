@@ -1,0 +1,831 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+
+/* ==================================================
+   CONFIGURAÇÕES GERAIS
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    font-family: "Google Sans", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==================================================
+   ESTRUTURA PRINCIPAL
+================================================== */
+
+.cabecalho {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(71, 128, 235);
+}
+
+
+/* ==================================================
+   CABEÇALHO SUPERIOR
+================================================== */
+
+.cabecalho-up {
+    width: 100%;
+    min-height: 95px;
+
+    background-color: rgb(53, 103, 196);
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 25px;
+
+    position: relative;
+}
+
+
+/* ==================================================
+   TÍTULO AUTIWORLD
+================================================== */
+
+.cabecalho-up h1 {
+    margin: 0;
+
+    font-size: 50px;
+
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   NOTIFICAÇÃO
+================================================== */
+
+.notificao {
+    margin-left: auto;
+}
+
+.notificao button {
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+
+/* ==================================================
+   PERFIL
+================================================== */
+
+.perfil {
+    width: 70px;
+    height: 70px;
+
+    margin-left: 25px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border: 3px solid #3B82F6;
+
+    flex-shrink: 0;
+}
+
+.perfil img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   MENU DO PERFIL
+================================================== */
+
+.menu-perfil {
+    display: none;
+
+    position: absolute;
+
+    top: 90px;
+    right: 20px;
+
+    width: 190px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, .15);
+
+    overflow: hidden;
+
+    z-index: 999;
+}
+
+.menu-perfil a {
+    display: block;
+
+    padding: 15px;
+
+    color: #1E3A8A;
+
+    font-size: 16px;
+
+    transition: .3s;
+}
+
+.menu-perfil a:hover {
+    background-color: #EAF4FF;
+}
+
+
+/* ==================================================
+   CAIXA DE NOTIFICAÇÃO
+================================================== */
+
+.caixa {
+    display: none;
+
+    position: absolute;
+
+    top: 90px;
+    right: 200px;
+
+    width: 180px;
+
+    min-height: 100px;
+
+    padding: 15px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, .2);
+
+    color: black;
+
+    z-index: 999;
+}
+
+.mostrar {
+    display: block;
+}
+
+
+/* ==================================================
+   ÁREA PRINCIPAL
+================================================== */
+
+.cabecalho-down {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    padding: 35px 20px 50px;
+}
+
+
+/* ==================================================
+   ÁREA DO BOTÃO VOLTAR
+================================================== */
+
+.area-voltar {
+    width: 70px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding-top: 5px;
+}
+
+
+/* ==================================================
+   BOTÃO VOLTAR
+================================================== */
+
+.botao-voltar {
+    color: white;
+
+    font-size: 55px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: .2s ease;
+}
+
+.botao-voltar:hover {
+    transform: scale(1.1);
+}
+
+
+/* ==================================================
+   ÁREA DE CONFIGURAÇÕES
+================================================== */
+
+.area-configuracoes {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 10px 30px 40px;
+}
+
+
+/* ==================================================
+   TÍTULO
+================================================== */
+
+.titulo-configuracoes {
+    color: white;
+
+    margin-bottom: 25px;
+}
+
+.titulo-configuracoes h2 {
+    margin: 0 0 8px;
+
+    font-size: 40px;
+}
+
+.titulo-configuracoes p {
+    margin: 0;
+
+    font-size: 18px;
+
+    color: white;
+}
+
+
+/* ==================================================
+   BLOCO
+================================================== */
+
+.bloco-configuracoes {
+    width: 100%;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    padding: 30px 35px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, .15);
+}
+
+
+/* ==================================================
+   TÍTULO DO BLOCO
+================================================== */
+
+.titulo-bloco {
+    margin: 0 0 10px;
+
+    color: #1E3A8A;
+
+    font-size: 28px;
+}
+
+
+/* ==================================================
+   ITEM
+================================================== */
+
+.config-item {
+    width: 100%;
+
+    min-height: 95px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 20px 0;
+
+    border-bottom:
+        1px solid #E2E8F0;
+}
+
+.config-item:last-of-type {
+    border-bottom: none;
+}
+
+
+/* ==================================================
+   INFORMAÇÕES
+================================================== */
+
+.config-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    flex: 1;
+}
+
+
+/* ==================================================
+   ÍCONE
+================================================== */
+
+.config-icone {
+    width: 55px;
+    height: 55px;
+
+    min-width: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background-color: #EAF4FF;
+
+    color: #2563EB;
+
+    font-size: 21px;
+
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   TEXTOS
+================================================== */
+
+.config-info h4 {
+    margin: 0 0 5px;
+
+    color: #1E3A8A;
+
+    font-size: 20px;
+}
+
+.config-info p {
+    margin: 0;
+
+    color: #64748B;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+}
+
+
+/* ==================================================
+   SWITCH
+================================================== */
+
+.switch {
+    position: relative;
+
+    width: 62px;
+    height: 34px;
+
+    flex-shrink: 0;
+}
+
+.switch input {
+    opacity: 0;
+
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+
+    inset: 0;
+
+    cursor: pointer;
+
+    background-color: #CBD5E1;
+
+    border-radius: 50px;
+
+    transition: .25s;
+}
+
+.slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 26px;
+    height: 26px;
+
+    left: 4px;
+    top: 4px;
+
+    background-color: white;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, .25);
+
+    transition: .25s;
+}
+
+.switch input:checked + .slider {
+    background-color: #2563EB;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(28px);
+}
+
+
+/* ==================================================
+   TAMANHO DA FONTE
+================================================== */
+
+.tamanhos-fonte {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+.botao-fonte {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 10px;
+
+    border: 2px solid #CBD5E1;
+
+    background-color: white;
+
+    color: #1E3A8A;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: .2s;
+}
+
+.botao-fonte:nth-child(1) {
+    font-size: 15px;
+}
+
+.botao-fonte:nth-child(2) {
+    font-size: 18px;
+}
+
+.botao-fonte:nth-child(3) {
+    font-size: 21px;
+}
+
+.botao-fonte:nth-child(4) {
+    font-size: 24px;
+}
+
+.botao-fonte:hover {
+    border-color: #2563EB;
+
+    color: #2563EB;
+
+    transform: translateY(-2px);
+}
+
+.botao-fonte.ativo {
+    background-color: #2563EB;
+
+    border-color: #2563EB;
+
+    color: white;
+}
+
+
+/* ==================================================
+   RESTAURAR
+================================================== */
+
+.area-restaurar {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    padding-top: 25px;
+}
+
+.botao-restaurar {
+    padding: 13px 22px;
+
+    border-radius: 10px;
+
+    border: 2px solid #EF4444;
+
+    background-color: white;
+
+    color: #DC2626;
+
+    font-family:
+        "Google Sans",
+        sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.botao-restaurar:hover {
+    background-color: #EF4444;
+
+    color: white;
+}
+
+
+/* ==================================================
+   FOCO
+================================================== */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid #F59E0B;
+
+    outline-offset: 3px;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .cabecalho-up h1 {
+        font-size: 40px;
+    }
+
+    .notificao button {
+        font-size: 38px;
+    }
+
+    .perfil {
+        width: 60px;
+        height: 60px;
+
+        margin-left: 18px;
+    }
+
+    .area-configuracoes {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .bloco-configuracoes {
+        padding: 25px;
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 600px) {
+
+    .cabecalho-up {
+        min-height: 80px;
+
+        padding: 10px 15px;
+    }
+
+    .cabecalho-up h1 {
+        font-size: 30px;
+    }
+
+    .notificao button {
+        font-size: 32px;
+    }
+
+    .perfil {
+        width: 52px;
+        height: 52px;
+
+        margin-left: 12px;
+    }
+
+    .menu-perfil {
+        top: 75px;
+
+        right: 10px;
+
+        width: 180px;
+    }
+
+    .caixa {
+        top: 75px;
+
+        right: 70px;
+    }
+
+    .cabecalho-down {
+        padding:
+            20px 10px 40px;
+    }
+
+    .area-voltar {
+        width: 45px;
+    }
+
+    .botao-voltar {
+        font-size: 45px;
+    }
+
+    .area-configuracoes {
+        padding:
+            5px 5px 30px;
+    }
+
+    .titulo-configuracoes h2 {
+        font-size: 30px;
+    }
+
+    .titulo-configuracoes p {
+        font-size: 15px;
+    }
+
+    .bloco-configuracoes {
+        padding:
+            20px 18px;
+
+        border-radius: 18px;
+    }
+
+    .titulo-bloco {
+        font-size: 23px;
+    }
+
+    .config-item {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 15px;
+    }
+
+    .config-info {
+        align-items: flex-start;
+    }
+
+    .config-info h4 {
+        font-size: 18px;
+    }
+
+    .config-info p {
+        font-size: 14px;
+    }
+
+    .config-icone {
+        width: 48px;
+        height: 48px;
+
+        min-width: 48px;
+    }
+
+    .switch {
+        align-self: flex-end;
+    }
+
+    .tamanhos-fonte {
+        justify-content: center;
+    }
+
+    .botao-fonte {
+        width: 48px;
+        height: 48px;
+    }
+
+    .area-restaurar {
+        justify-content: center;
+    }
+
+    .botao-restaurar {
+        width: 100%;
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR PEQUENO
+================================================== */
+
+@media (max-width: 380px) {
+
+    .cabecalho-up h1 {
+        font-size: 26px;
+    }
+
+    .notificao button {
+        font-size: 28px;
+    }
+
+    .perfil {
+        width: 47px;
+        height: 47px;
+    }
+
+    .area-voltar {
+        width: 38px;
+    }
+
+    .botao-voltar {
+        font-size: 40px;
+    }
+
+    .config-info {
+        gap: 12px;
+    }
+
+    .config-icone {
+        width: 43px;
+        height: 43px;
+
+        min-width: 43px;
+
+        font-size: 17px;
+    }
+
+    .tamanhos-fonte {
+        gap: 4px;
+    }
+
+    .botao-fonte {
+        width: 43px;
+        height: 43px;
+    }
+
+}

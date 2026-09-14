@@ -47,35 +47,53 @@ body {
 
 }
 
-
 /* ==================================================
    LADO ESQUERDO
 ================================================== */
 
 .individuo-lado-esquerdo {
-
     width: 60%;
-
     min-height: 100vh;
 
+    /* SOMENTE O FUNDO */
     background-image: url("img/logo-plano-d-fundo.png");
-
     background-repeat: no-repeat;
-
     background-position: center;
-
     background-size: cover;
 
     display: flex;
-
     justify-content: center;
-
     align-items: flex-end;
 
     padding-bottom: 80px;
 
+    /* Necessário para posicionar a peça */
+    position: relative;
 }
 
+/* ==================================================
+   PEÇA DO QUEBRA-CABEÇA
+================================================== */
+
+.logo-quebra-cabeca {
+    position: absolute;
+
+    /* TAMANHO NO PC */
+    width: 320px;
+    height: auto;
+
+    object-fit: contain;
+
+    /* CENTRALIZA A PEÇA */
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    pointer-events: none;
+}
 
 /* ==================================================
    LOGO AUTI
@@ -387,45 +405,62 @@ body {
    ATÉ 900px
 ================================================== */
 
+/* ==================================================
+   TABLET
+   ATÉ 900px
+================================================== */
+
 @media (max-width: 900px) {
 
-
     .individuo-cabecalho {
-
         flex-direction: column;
-
         background-color: white;
-
     }
 
 
+    /* ==========================================
+       LADO ESQUERDO
+    ========================================== */
+
     .individuo-lado-esquerdo {
-
         width: 100%;
-
         height: 300px;
-
         min-height: 300px;
 
         padding-bottom: 30px;
 
         background-position: center;
 
+        position: relative;
     }
 
 
+    /* ==========================================
+       PEÇA NO TABLET
+    ========================================== */
+
+    .logo-quebra-cabeca {
+        width: 220px;
+
+        left: 50%;
+        top: 40%;
+
+        transform: translate(-50%, -50%);
+    }
+
+
+    /* ==========================================
+       LADO DIREITO
+    ========================================== */
+
     .individuo-lado-direito {
-
         width: 100%;
-
         min-height: auto;
 
         padding: 50px 30px;
 
         background-color: white;
-
     }
-
 
 }
 
@@ -461,20 +496,36 @@ body {
        LADO ESQUERDO
     ========================================== */
 
-    .individuo-lado-esquerdo {
+    /* ==========================================
+   LADO ESQUERDO
+========================================== */
 
-        width: 100%;
+.individuo-lado-esquerdo {
+    width: 100%;
 
-        height: 180px;
+    height: 180px;
+    min-height: 180px;
 
-        min-height: 180px;
+    padding-bottom: 20px;
 
-        padding-bottom: 20px;
+    background-position: center;
 
-        background-position: center;
+    position: relative;
+}
 
-    }
 
+/* ==========================================
+   PEÇA NO CELULAR
+========================================== */
+
+.logo-quebra-cabeca {
+    width: 110px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
 
     /* ==========================================
        LOGO
@@ -601,45 +652,46 @@ body {
    CELULAR PEQUENO
    ATÉ 400px
 ================================================== */
+/* ==================================================
+   CELULAR PEQUENO
+   ATÉ 400px
+================================================== */
 
 @media (max-width: 400px) {
 
-
     .individuo-lado-esquerdo {
-
         height: 160px;
-
         min-height: 160px;
+    }
 
+
+    /* ==========================================
+       PEÇA PEQUENA
+    ========================================== */
+
+    .logo-quebra-cabeca {
+        width: 90px;
     }
 
 
     .logo-pt1 h1,
     .logo-pt2 h1 {
-
         font-size: 38px;
-
     }
 
 
     .individuo-lado-direito {
-
         padding: 30px 15px;
-
     }
 
 
     .individuo-titulo h1 {
-
         font-size: 28px;
-
     }
 
 
     .individuo-titulo p {
-
         font-size: 14px;
-
     }
 
 
@@ -647,18 +699,13 @@ body {
     .individuo-data input,
     .individuo-idade input,
     .individuo-genero select {
-
         height: 55px;
-
         font-size: 15px;
-
     }
 
 
     .individuo-botao button {
-
         height: 55px;
-
     }
 
 }

@@ -57,27 +57,44 @@ body {
 ================================================== */
 
 .login-lado-esquerdo {
-
     width: 60%;
-
     min-height: 100vh;
 
     background-image: url("img/logo-plano-d-fundo.png");
-
     background-repeat: no-repeat;
-
     background-position: center;
-
     background-size: cover;
 
     display: flex;
-
     justify-content: center;
-
     align-items: flex-end;
 
     padding-bottom: 80px;
 
+    /* Permite posicionar a peça separadamente */
+    position: relative;
+}
+
+/* ==================================================
+   PEÇA DO QUEBRA-CABEÇA — PC
+================================================== */
+
+.logo-quebra-cabeca {
+    position: absolute;
+
+    width: 320px;
+    height: auto;
+
+    object-fit: contain;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    pointer-events: none;
 }
 
 
@@ -402,9 +419,11 @@ body {
 
     border-radius: 70px;
 
-    background-color: rgb(71, 128, 235);
+    border: 3px solid black;
 
-    color: white;
+    background-color: white;
+
+    color: black;
 
     font-size: 20px;
 
@@ -510,6 +529,14 @@ body {
         background-position: center;
 
     }
+    .logo-quebra-cabeca {
+        width: 220px;
+
+        left: 50%;
+        top: 40%;
+
+        transform: translate(-50%, -50%);
+    }
 
 
     .login-lado-direito {
@@ -556,19 +583,25 @@ body {
        LADO ESQUERDO
     ========================================== */
 
-    .login-lado-esquerdo {
+.login-lado-esquerdo {
+    width: 100%;
+    height: 200px;
+    min-height: 200px;
+    padding-bottom: 20px;
+    background-position: center;
+}
 
-        width: 100%;
 
-        height: 200px;
+/* ==================================================
+   PEÇA NO CELULAR
+================================================== */
 
-        min-height: 200px;
-
-        padding-bottom: 20px;
-
-        background-position: center;
-
-    }
+.logo-quebra-cabeca {
+    width: 95px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
     /* ==========================================
@@ -762,13 +795,9 @@ body {
 @media (max-width: 400px) {
 
 
-    .login-lado-esquerdo {
-
-        height: 170px;
-
-        min-height: 170px;
-
-    }
+.logo-quebra-cabeca {
+    width: 80px;
+}
 
 
     .logo-pt1 h1,

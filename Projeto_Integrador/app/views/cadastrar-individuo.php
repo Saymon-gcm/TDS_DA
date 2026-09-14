@@ -14,6 +14,7 @@
         rel="stylesheet"
         type="text/css">
 
+    <link href="../../public/css/acessibilidade.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -22,11 +23,18 @@
 
 
         <!-- =====================================
-             LADO ESQUERDO
-        ====================================== -->
+     LADO ESQUERDO
+====================================== -->
 
         <div class="individuo-lado-esquerdo">
 
+            <!-- PEÇA DO QUEBRA-CABEÇA -->
+            <img
+                src="../../public/css/img/logo.png"
+                alt="Peça do AutiWorld"
+                class="logo-quebra-cabeca">
+
+            <!-- NOME AUTIWORLD -->
             <div class="logo-pt1">
                 <h1>Auti</h1>
             </div>
@@ -56,7 +64,7 @@
                 <div class="individuo-titulo">
 
                     <h1>
-                        Cadastrar Indivíduo
+                        Cadastrar Dependente
                     </h1>
 
                     <p>
@@ -159,6 +167,7 @@
 
     </div>
 
+    <script src="../../public/js/acessibilidade.js"></script>
 </body>
 
 </html>

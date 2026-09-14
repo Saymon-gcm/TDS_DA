@@ -7,16 +7,14 @@
 
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+        content="width=device-width, initial-scale=1.0">
 
     <title>AutiWorld</title>
 
     <link
         href="public/css/style.css"
         rel="stylesheet"
-        type="text/css"
-    >
+        type="text/css">
 
 </head>
 
@@ -32,17 +30,19 @@
 
         <div class="login-lado-esquerdo">
 
+            <!-- PEÇA DO QUEBRA-CABEÇA -->
+            <img
+                src="public/css/img/logo.png"
+                alt="Peça do AutiWorld"
+                class="logo-quebra-cabeca">
+
+            <!-- NOME AUTIWORLD -->
             <div class="logo-pt1">
-
                 <h1>Auti</h1>
-
             </div>
 
-
             <div class="logo-pt2">
-
                 <h1>World</h1>
-
             </div>
 
         </div>
@@ -63,8 +63,7 @@
             <form
                 action="app/controllers/login.php"
                 method="POST"
-                id="form-login"
-            >
+                id="form-login">
 
 
                 <!-- ==========================================
@@ -88,8 +87,7 @@
 
                     <img
                         src="public/css/img/login_email-removebg-preview.png"
-                        alt="Ícone de email"
-                    >
+                        alt="Ícone de email">
 
 
                     <input
@@ -98,8 +96,7 @@
                         id="email"
                         placeholder="Email"
                         autocomplete="email"
-                        required
-                    >
+                        required>
 
 
                 </div>
@@ -115,8 +112,7 @@
 
                     <img
                         src="public/css/img/chave-removebg-preview.png"
-                        alt="Ícone de senha"
-                    >
+                        alt="Ícone de senha">
 
 
                     <input
@@ -125,8 +121,7 @@
                         id="senha"
                         placeholder="Senha"
                         autocomplete="current-password"
-                        required
-                    >
+                        required>
 
 
                 </div>
@@ -147,8 +142,7 @@
                             type="checkbox"
                             name="login_automatico"
                             id="login_automatico"
-                            value="1"
-                        >
+                            value="1">
 
 
                         <span>
@@ -191,8 +185,7 @@
                     <button
                         type="submit"
                         name="botao"
-                        value="login"
-                    >
+                        value="login">
 
                         Entrar
 
@@ -215,8 +208,7 @@
 
                 <a
                     class="Cad-user"
-                    href="cadastrar.php"
-                >
+                    href="cadastrar.php">
 
                     Cadastrar-se
 
@@ -238,10 +230,9 @@
     =========================================== -->
 
     <script>
-
         document.addEventListener(
             "DOMContentLoaded",
-            function () {
+            function() {
 
 
                 // ==========================================
@@ -310,7 +301,7 @@
 
                 formulario.addEventListener(
                     "submit",
-                    function () {
+                    function() {
 
 
                         // ==========================================
@@ -340,7 +331,6 @@
                         // ==========================================
                         // SE LOGIN AUTOMÁTICO NÃO ESTIVER MARCADO
                         // ==========================================
-
                         else {
 
 
@@ -368,7 +358,7 @@
 
                 loginAutomatico.addEventListener(
                     "change",
-                    function () {
+                    function() {
 
 
                         if (
@@ -395,7 +385,6 @@
 
             }
         );
-
     </script>
 
 

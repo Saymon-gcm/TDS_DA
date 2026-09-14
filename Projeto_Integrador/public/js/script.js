@@ -38,29 +38,80 @@ document.addEventListener("click", () => {
     caixa.classList.remove("mostrar");
 });
 
-function falar(texto) {
+function falar(texto, botao) {
 
-    // Cria uma nova mensagem de voz
+    // =========================================
+    // FAZER O NAVEGADOR FALAR
+    // =========================================
+
     const mensagem = new SpeechSynthesisUtterance();
 
-    // Define o texto que será falado
     mensagem.text = texto;
 
-    // Define o idioma para português do Brasil
     mensagem.lang = "pt-BR";
 
-    // Velocidade da fala
     mensagem.rate = 0.9;
 
-    // Tom da voz
     mensagem.pitch = 1;
 
-    // Para uma fala anterior, caso exista
     window.speechSynthesis.cancel();
 
-    // Faz o navegador falar
     window.speechSynthesis.speak(mensagem);
+
+
+    // =========================================
+    // PEGAR A IMAGEM DO CARD CLICADO
+    // =========================================
+
+    const imagem = botao.querySelector("img");
+
+    if (!imagem) {
+        return;
+    }
+
+
+    // =========================================
+    // PEGAR O MODAL
+    // =========================================
+
+    const modal = document.getElementById("modalImagem");
+
+    const imagemAmpliada =
+        document.getElementById("imagemAmpliada");
+
+
+    // =========================================
+    // COLOCAR A IMAGEM NO MODAL
+    // =========================================
+
+    imagemAmpliada.src = imagem.src;
+
+    imagemAmpliada.alt = imagem.alt;
+
+
+    // =========================================
+    // ABRIR MODAL
+    // =========================================
+
+    modal.classList.add("ativo");
+
 }
+const modalImagem =
+    document.getElementById("modalImagem");
+
+const fundoModal =
+    document.querySelector(".fundo-modal");
+
+if (modalImagem && fundoModal) {
+
+    fundoModal.addEventListener("click", function () {
+
+        modalImagem.classList.remove("ativo");
+
+    });
+
+}
+
 const botaoNotificacao = document.getElementById("notificacaoButton");
 
 if (botaoNotificacao) {
@@ -111,24 +162,55 @@ if (botaoNotificacao) {
     });
 
 }
+
 function abrirSOS() {
 
     const resposta = confirm(
-        "🚨 Emergência!\n\nDeseja ligar para o responsável?"
+        "🚨 EMERGÊNCIA!\n\n" +
+        "Deseja enviar uma mensagem de emergência " +
+        "pelo WhatsApp para o responsável?"
     );
 
     if (!resposta) {
+        return;
+    }
+
+    // ==========================================
+    // VERIFICAR TELEFONE
+    // ==========================================
+
+    if (!telefoneResponsavel) {
+
+        alert(
+            "❌ Não foi encontrado um número de telefone " +
+            "cadastrado para o responsável."
+        );
 
         return;
-
     }
 
-    if (navigator.vibrate) {
+    // ==========================================
+    // MENSAGEM
+    // ==========================================
 
-        navigator.vibrate([300,150,300]);
+    const mensagem =
+        "❗ALERTA AUTIWORLD!\n\n" +
+        "Uma situação de emergência foi acionada no AutiWorld.\n\n" +
+        "Por favor, entre em contato com o usuário o mais rápido possível.";
 
-    }
+    // ==========================================
+    // CRIAR LINK DO WHATSAPP
+    // ==========================================
 
-    window.location.href = "tel:+55" + telefoneResponsavel;
+    const url =
+        "https://wa.me/" +
+        telefoneResponsavel +
+        "?text=" +
+        encodeURIComponent(mensagem);
 
+    // ==========================================
+    // ABRIR WHATSAPP
+    // ==========================================
+
+    window.open(url, "_blank");
 }

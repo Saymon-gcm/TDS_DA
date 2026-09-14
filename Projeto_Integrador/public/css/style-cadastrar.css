@@ -53,27 +53,44 @@ body {
 ================================================== */
 
 .cadastrar-lado-esquerdo {
-
     width: 60%;
-
     min-height: 100vh;
 
     background-image: url("img/logo-plano-d-fundo.png");
-
     background-repeat: no-repeat;
-
     background-position: center;
-
     background-size: cover;
 
     display: flex;
-
     justify-content: center;
-
     align-items: flex-end;
 
     padding-bottom: 80px;
 
+    /* Permite posicionar a peça separadamente */
+    position: relative;
+}
+
+/* ==================================================
+   PEÇA DO QUEBRA-CABEÇA
+================================================== */
+
+.logo-quebra-cabeca {
+    position: absolute;
+
+    width: 320px;
+    height: auto;
+
+    object-fit: contain;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    pointer-events: none;
 }
 
 
@@ -497,42 +514,41 @@ body {
    ATÉ 900px
 ================================================== */
 
+/* ==================================================
+   TABLET
+   ATÉ 900px
+================================================== */
+
 @media (max-width: 900px) {
 
     .cadastrar-cabecalho {
-
         flex-direction: column;
-
         background-color: white;
-
     }
-
 
     .cadastrar-lado-esquerdo {
-
         width: 100%;
-
         height: 300px;
-
         min-height: 300px;
-
         padding-bottom: 30px;
-
         background-position: center;
-
     }
 
+    /* PEÇA NO TABLET */
+    .logo-quebra-cabeca {
+        width: 220px;
+
+        left: 50%;
+        top: 40%;
+
+        transform: translate(-50%, -50%);
+    }
 
     .cadastrar-lado-direito {
-
         width: 100%;
-
         min-height: auto;
-
         padding: 50px 30px;
-
         background-color: white;
-
     }
 
 }
@@ -545,43 +561,31 @@ body {
 
 @media (max-width: 600px) {
 
-    /* ==========================================
-       TELA PRINCIPAL
-    ========================================== */
-
     .cadastrar-cabecalho {
-
         width: 100%;
-
         min-height: 100vh;
-
         display: flex;
-
         flex-direction: column;
-
         background-color: white;
-
     }
-
-
-    /* ==========================================
-       LADO ESQUERDO
-    ========================================== */
 
     .cadastrar-lado-esquerdo {
-
         width: 100%;
-
         height: 200px;
-
         min-height: 200px;
-
         padding-bottom: 20px;
-
         background-position: center;
-
     }
 
+    /* PEÇA NO CELULAR */
+    .logo-quebra-cabeca {
+        width: 110px;
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+    }
 
     /* ==========================================
        LOGO

@@ -5,18 +5,16 @@
 
     <meta charset="UTF-8">
 
-    <meta 
-        name="viewport" 
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>AutiWorld</title>
 
-    <link 
-        href="public/css/style-esq-senha.css" 
-        rel="stylesheet" 
-        type="text/css"
-    >
+    <link
+        href="public/css/style-esq-senha.css"
+        rel="stylesheet"
+        type="text/css">
 
 </head>
 
@@ -31,6 +29,13 @@
 
         <div class="login-lado-esquerdo">
 
+            <!-- PEÇA DO QUEBRA-CABEÇA -->
+            <img
+                src="public/css/img/logo.png"
+                alt="Peça do AutiWorld"
+                class="logo-quebra-cabeca">
+
+            <!-- NOME AUTIWORLD -->
             <div class="logo-pt1">
                 <h1>Auti</h1>
             </div>
@@ -48,10 +53,9 @@
 
         <div class="login-lado-direito">
 
-            <form 
-                action="../controllers/" 
-                method="POST"
-            >
+            <form
+                action="app/controllers/recuperar-senha_controller.php"
+                method="POST">
 
 
                 <!-- =================================
@@ -60,10 +64,9 @@
 
                 <div class="login">
 
-                    <a 
-                        href="index.php" 
-                        class="voltar"
-                    >
+                    <a
+                        href="index.php"
+                        class="voltar">
                         ← Voltar
                     </a>
 
@@ -80,17 +83,15 @@
 
                 <div class="login-nome-email">
 
-                    <img 
+                    <img
                         src="public/css/img/login_email-removebg-preview.png"
-                        alt="Ícone de email"
-                    >
+                        alt="Ícone de email">
 
-                    <input 
+                    <input
                         type="email"
                         name="email"
-                        placeholder="Email ou Nome"
-                        required
-                    >
+                        placeholder="Email"
+                        required>
 
                 </div>
 
@@ -101,7 +102,7 @@
 
                 <p class="recado-senha">
 
-                    Digite seu email ou nome para receber
+                    Digite seu email para receber
                     um código de recuperação.
 
                 </p>
@@ -113,11 +114,10 @@
 
                 <div class="login-botao">
 
-                    <button 
+                    <button
                         type="submit"
                         name="botao"
-                        value="login"
-                    >
+                        value="login">
                         Enviar Código
                     </button>
 

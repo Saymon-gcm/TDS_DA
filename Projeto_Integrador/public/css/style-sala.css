@@ -1,0 +1,1289 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    font-family: "Google Sans", Arial, sans-serif;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: rgb(71, 128, 235);
+}
+
+button,
+a,
+input {
+    font-family: inherit;
+}
+
+
+/* ==================================================
+   CONTAINER
+================================================== */
+
+.sala-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: rgb(71, 128, 235);
+}
+
+
+/* ==================================================
+   CABEÇALHO
+================================================== */
+
+.sala-header {
+    width: 100%;
+    min-height: 90px;
+    padding: 12px 25px;
+
+    background: rgb(53, 103, 196);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    flex-shrink: 0;
+}
+
+
+/* ==================================================
+   VOLTAR
+================================================== */
+
+.botao-voltar {
+    width: 50px;
+    height: 50px;
+
+    color: white;
+    font-size: 45px;
+    line-height: 1;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    transition: transform .2s ease;
+}
+
+.botao-voltar:hover {
+    transform: scale(1.1);
+}
+
+
+/* ==================================================
+   TÍTULO
+================================================== */
+
+.titulo-sala {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    flex: 1;
+}
+
+.titulo-sala > span {
+    font-size: 40px;
+    flex-shrink: 0;
+}
+
+.titulo-sala h1 {
+    margin: 0;
+
+    font-size: 30px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.titulo-sala p {
+    margin: 3px 0 0;
+
+    font-size: 15px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ==================================================
+   STATUS
+================================================== */
+
+.status-sala {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 15px;
+
+    background: rgba(255,255,255,.15);
+
+    border-radius: 20px;
+
+    font-size: 15px;
+
+    flex-shrink: 0;
+}
+
+.bolinha {
+    width: 10px;
+    height: 10px;
+
+    background: #35d06f;
+
+    border-radius: 50%;
+}
+
+
+/* ==================================================
+   ÁREA PRINCIPAL
+================================================== */
+
+.area-aula {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+
+    gap: 25px;
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* ==================================================
+   CARDS PRINCIPAIS
+================================================== */
+
+.professor-area,
+.alunos-area,
+.minha-camera {
+    width: 100%;
+    min-width: 0;
+
+    background: rgba(255,255,255,.12);
+
+    border-radius: 25px;
+
+    padding: 20px;
+
+    border: 3px solid rgba(255,255,255,.5);
+}
+
+
+/* ==================================================
+   TÍTULO DAS ÁREAS
+================================================== */
+
+.titulo-area {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+    color: white;
+
+    min-width: 0;
+}
+
+.titulo-area h2 {
+    margin: 0;
+
+    font-size: 22px;
+}
+
+.titulo-area span {
+    font-size: 15px;
+}
+
+
+/* ==================================================
+   VÍDEO DO PROFESSOR
+================================================== */
+
+.video-professor {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    min-height: 300px;
+
+    background: #172554;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ==================================================
+   PLACEHOLDER PROFESSOR
+================================================== */
+
+.professor-placeholder {
+    width: 100%;
+
+    color: white;
+
+    text-align: center;
+
+    z-index: 1;
+
+    display: block;
+}
+
+.icone-professor {
+    width: 100px;
+    height: 100px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background: rgb(71, 128, 235);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 55px;
+}
+
+.professor-placeholder h3 {
+    margin: 0;
+
+    font-size: 25px;
+}
+
+.professor-placeholder p {
+    margin: 5px 0;
+
+    font-size: 16px;
+}
+
+
+/* ==================================================
+   VÍDEO REAL PROFESSOR
+================================================== */
+
+.video-real {
+    display: none;
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   COMPARTILHAMENTO DE TELA
+================================================== */
+
+.video-tela {
+    display: none;
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    background: #000;
+
+    z-index: 3;
+}
+
+.compartilhamento-ativo {
+    display: none;
+
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 8px 12px;
+
+    background: rgba(0,0,0,.75);
+
+    color: white;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    z-index: 5;
+}
+
+
+/* ==================================================
+   PARTICIPANTES
+================================================== */
+
+.alunos-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+
+    min-width: 0;
+}
+
+.card-aluno {
+    width: 100%;
+    min-width: 0;
+
+    min-height: 130px;
+
+    background: #3A9DFF;
+
+    border: 3px solid white;
+
+    border-radius: 18px;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.avatar-aluno {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+.avatar-aluno img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.card-aluno .nome-aluno {
+    max-width: 90%;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-aluno .nome-aluno small {
+    position: static;
+
+    font-size: 12px;
+}
+
+.card-aluno .estado-microfone {
+    position: absolute;
+
+    right: 8px;
+    bottom: 8px;
+
+    font-size: 16px;
+}
+
+.avatar-padrao {
+    font-size: 30px;
+}
+
+.sou-eu {
+    border-color: #ffffff;
+}
+
+
+/* ==================================================
+   SEM PARTICIPANTES
+================================================== */
+
+.sem-participantes {
+    grid-column: 1 / -1;
+
+    min-height: 150px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    text-align: center;
+}
+
+.sem-participantes span {
+    font-size: 40px;
+}
+
+.sem-participantes p {
+    margin: 8px 0 0;
+}
+
+
+/* ==================================================
+   MINHA CÂMERA
+================================================== */
+
+.minha-camera {
+    grid-column: 1 / 3;
+}
+
+
+/* ==================================================
+   VÍDEO DO ALUNO
+================================================== */
+
+.video-aluno {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    min-height: 180px;
+
+    max-height: 400px;
+
+    background: #172554;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-aluno video {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scaleX(-1);
+
+    background: #172554;
+}
+
+
+/* ==================================================
+   MENSAGEM CÂMERA
+================================================== */
+
+.camera-mensagem {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    background: #172554;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+.camera-mensagem span {
+    font-size: 45px;
+}
+
+.camera-mensagem p {
+    margin: 8px 0;
+
+    font-size: 17px;
+}
+
+
+/* ==================================================
+   CONTROLES
+================================================== */
+
+.controles {
+    width: 100%;
+
+    min-height: 90px;
+
+    padding: 15px 25px;
+
+    background: rgb(53, 103, 196);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    flex-shrink: 0;
+
+    position: sticky;
+
+    bottom: 0;
+
+    z-index: 100;
+}
+
+.controle {
+    width: 55px;
+    height: 55px;
+
+    padding: 0;
+
+    border: 3px solid white;
+
+    border-radius: 50%;
+
+    background: rgb(71, 128, 235);
+
+    color: white;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+
+    transition:
+        transform .2s ease,
+        background-color .2s ease;
+}
+
+.controle:hover {
+    transform: scale(1.08);
+
+    background: #2563EB;
+}
+
+.controle.ativo {
+    background: white;
+
+    color: #1E3A8A;
+}
+
+
+/* ==================================================
+   SAIR
+================================================== */
+
+.controle.sair {
+    background: #dc2626;
+
+    transform: rotate(135deg);
+}
+
+.controle.sair:hover {
+    background: #b91c1c;
+
+    transform: rotate(135deg) scale(1.08);
+}
+
+
+/* ==================================================
+   CHAT
+================================================== */
+
+.mensagem-chat {
+    display: none;
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 105px;
+
+    width: 350px;
+    max-width: calc(100vw - 30px);
+
+    height: 430px;
+    max-height: calc(100vh - 130px);
+
+    padding: 0;
+
+    background: white;
+
+    color: #1E3A8A;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.25);
+
+    z-index: 1000;
+
+    overflow: hidden;
+
+    flex-direction: column;
+}
+
+.mensagem-chat.mostrar {
+    display: flex;
+}
+
+
+/* ==================================================
+   CABEÇALHO CHAT
+================================================== */
+
+.chat-cabecalho {
+    width: 100%;
+
+    padding: 15px;
+
+    background: #3567C4;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    flex-shrink: 0;
+}
+
+.chat-cabecalho strong {
+    font-size: 18px;
+}
+
+.chat-cabecalho button {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* ==================================================
+   MENSAGENS
+================================================== */
+
+.chat-mensagens {
+    flex: 1;
+
+    min-height: 0;
+
+    padding: 15px;
+
+    overflow-y: auto;
+
+    background: #f5f7fb;
+}
+
+.chat-vazio {
+    color: #64748b;
+
+    text-align: center;
+
+    line-height: 1.5;
+}
+
+.chat-mensagem {
+    width: fit-content;
+
+    max-width: 85%;
+
+    margin-bottom: 10px;
+
+    padding: 10px 13px;
+
+    background: #3A9DFF;
+
+    color: white;
+
+    border-radius: 12px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==================================================
+   INPUT CHAT
+================================================== */
+
+.chat-input-area {
+    width: 100%;
+
+    padding: 10px;
+
+    display: flex;
+
+    gap: 8px;
+
+    border-top: 1px solid #ddd;
+
+    background: white;
+
+    flex-shrink: 0;
+}
+
+.chat-input-area input {
+    min-width: 0;
+
+    flex: 1;
+
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.chat-input-area input:focus {
+    border-color: #3567C4;
+}
+
+.chat-input-area button {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #3567C4;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .area-aula {
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+
+        gap: 20px;
+    }
+
+    .minha-camera {
+        grid-column: auto;
+    }
+
+    .video-professor {
+        min-height: 320px;
+    }
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 650px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* ==============================================
+       CABEÇALHO
+    ============================================== */
+
+    .sala-header {
+        width: 100%;
+
+        min-height: 70px;
+
+        padding: 8px 12px;
+
+        gap: 8px;
+    }
+
+    .botao-voltar {
+        width: 38px;
+        height: 42px;
+
+        font-size: 36px;
+    }
+
+    .titulo-sala {
+        gap: 7px;
+
+        min-width: 0;
+    }
+
+    .titulo-sala > span {
+        font-size: 27px;
+    }
+
+    .titulo-sala h1 {
+        font-size: 18px;
+
+        max-width: 150px;
+    }
+
+    .titulo-sala p {
+        font-size: 11px;
+
+        max-width: 160px;
+    }
+
+    .status-sala {
+        padding: 6px 8px;
+
+        font-size: 11px;
+
+        gap: 5px;
+    }
+
+    .bolinha {
+        width: 7px;
+        height: 7px;
+    }
+
+
+    /* ==============================================
+       ÁREA
+    ============================================== */
+
+    .area-aula {
+        width: 100%;
+
+        padding: 12px;
+
+        gap: 12px;
+
+        grid-template-columns: 1fr;
+
+        min-width: 0;
+    }
+
+
+    /* ==============================================
+       CARDS
+    ============================================== */
+
+    .professor-area,
+    .alunos-area,
+    .minha-camera {
+        width: 100%;
+
+        padding: 12px;
+
+        border-radius: 17px;
+
+        border-width: 2px;
+    }
+
+
+    /* ==============================================
+       TÍTULOS
+    ============================================== */
+
+    .titulo-area {
+        margin-bottom: 10px;
+    }
+
+    .titulo-area h2 {
+        font-size: 18px;
+    }
+
+    .titulo-area span {
+        font-size: 12px;
+    }
+
+
+    /* ==============================================
+       VÍDEO PROFESSOR
+    ============================================== */
+
+    .video-professor {
+        width: 100%;
+
+        aspect-ratio: 16 / 9;
+
+        min-height: 0;
+
+        border-radius: 14px;
+    }
+
+    .icone-professor {
+        width: 65px;
+        height: 65px;
+
+        font-size: 35px;
+
+        margin-bottom: 10px;
+    }
+
+    .professor-placeholder h3 {
+        font-size: 18px;
+    }
+
+    .professor-placeholder p {
+        font-size: 13px;
+    }
+
+
+    /* ==============================================
+       PARTICIPANTES
+    ============================================== */
+
+    .alunos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+    .card-aluno {
+        min-height: 100px;
+
+        border-width: 2px;
+
+        border-radius: 13px;
+    }
+
+    .avatar-aluno {
+        width: 45px;
+        height: 45px;
+
+        margin-bottom: 5px;
+    }
+
+    .card-aluno .nome-aluno {
+        font-size: 13px;
+    }
+
+    .card-aluno .nome-aluno small {
+        font-size: 10px;
+    }
+
+    .card-aluno .estado-microfone {
+        right: 5px;
+        bottom: 5px;
+
+        font-size: 13px;
+    }
+
+
+    /* ==============================================
+       MINHA CÂMERA
+    ============================================== */
+
+    .minha-camera {
+        grid-column: auto;
+    }
+
+    .video-aluno {
+        width: 100%;
+
+        aspect-ratio: 16 / 9;
+
+        height: auto;
+
+        min-height: 0;
+
+        max-height: none;
+
+        border-radius: 14px;
+    }
+
+    .camera-mensagem span {
+        font-size: 35px;
+    }
+
+    .camera-mensagem p {
+        font-size: 13px;
+    }
+
+
+    /* ==============================================
+       CONTROLES
+    ============================================== */
+
+    .controles {
+        width: 100%;
+
+        min-height: 70px;
+
+        padding: 9px 8px;
+
+        gap: 7px;
+
+        justify-content: center;
+    }
+
+    .controle {
+        width: 45px;
+        height: 45px;
+
+        border-width: 2px;
+
+        font-size: 18px;
+    }
+
+
+    /* ==============================================
+       CHAT
+    ============================================== */
+
+    .mensagem-chat {
+        left: 10px;
+        right: 10px;
+
+        bottom: 80px;
+
+        width: auto;
+
+        max-width: none;
+
+        height: min(430px, calc(100vh - 100px));
+
+        border-radius: 14px;
+    }
+
+    .chat-cabecalho {
+        padding: 12px;
+    }
+
+    .chat-cabecalho strong {
+        font-size: 16px;
+    }
+}
+
+
+/* ==================================================
+   CELULARES PEQUENOS
+================================================== */
+
+@media (max-width: 400px) {
+
+    .sala-header {
+        padding: 7px 9px;
+    }
+
+    .botao-voltar {
+        width: 34px;
+        font-size: 32px;
+    }
+
+    .titulo-sala > span {
+        font-size: 24px;
+    }
+
+    .titulo-sala h1 {
+        font-size: 16px;
+
+        max-width: 120px;
+    }
+
+    .titulo-sala p {
+        font-size: 10px;
+
+        max-width: 130px;
+    }
+
+    .status-sala {
+        display: none;
+    }
+
+
+    .area-aula {
+        padding: 9px;
+
+        gap: 10px;
+    }
+
+
+    .professor-area,
+    .alunos-area,
+    .minha-camera {
+        padding: 10px;
+    }
+
+
+    .video-professor {
+        aspect-ratio: 16 / 9;
+    }
+
+
+    .card-aluno {
+        min-height: 90px;
+    }
+
+
+    .avatar-aluno {
+        width: 40px;
+        height: 40px;
+
+        font-size: 22px;
+    }
+
+
+    .card-aluno .nome-aluno {
+        font-size: 12px;
+    }
+
+
+    .controles {
+        gap: 5px;
+
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+
+    .controle {
+        width: 42px;
+        height: 42px;
+
+        font-size: 16px;
+    }
+}
+
+
+/* ==================================================
+   CELULARES MUITO ESTREITOS
+================================================== */
+
+@media (max-width: 350px) {
+
+    .controle {
+        width: 39px;
+        height: 39px;
+
+        font-size: 15px;
+    }
+
+    .controles {
+        gap: 4px;
+    }
+
+    .titulo-sala h1 {
+        max-width: 95px;
+    }
+}

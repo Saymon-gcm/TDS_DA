@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+
+/* ==================================================
+   CONFIGURAÇÕES GERAIS
+================================================== */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+html,
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    min-height: 100%;
+
+}
+
+
+body {
+
+    font-family: "Google Sans", sans-serif;
+
+    background-color: rgb(71, 128, 235);
+
+    overflow-x: hidden;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+
+/* ==================================================
+   PÁGINA
+================================================== */
+
+.pagina-recuperar {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+}
+
+
+
+/* ==================================================
+   LADO ESQUERDO
+================================================== */
+
+.lado-esquerdo {
+
+    width: 50%;
+
+    min-height: 100vh;
+
+    background-color: rgb(53, 103, 196);
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px;
+
+    text-align: center;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    line-height: 1;
+
+}
+
+
+.logo-auti {
+
+    font-size: clamp(50px, 6vw, 85px);
+
+    font-weight: bold;
+
+}
+
+
+.logo-world {
+
+    font-size: clamp(50px, 6vw, 85px);
+
+    font-weight: bold;
+
+    color: #8BC6FF;
+
+}
+
+
+.emoji {
+
+    font-size: clamp(40px, 5vw, 70px);
+
+    margin-left: 10px;
+
+}
+
+
+.texto-esquerdo {
+
+    max-width: 500px;
+
+    margin-top: 35px;
+
+    font-size: clamp(18px, 2vw, 25px);
+
+    line-height: 1.5;
+
+}
+
+
+
+/* ==================================================
+   LADO DIREITO
+================================================== */
+
+.lado-direito {
+
+    width: 50%;
+
+    min-height: 100vh;
+
+    background-color: rgb(71, 128, 235);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 25px;
+
+}
+
+
+
+/* ==================================================
+   CAIXA
+================================================== */
+
+.caixa-recuperar {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, .20);
+
+}
+
+
+.caixa-recuperar h1 {
+
+    margin: 0;
+
+    color: #1E3A8A;
+
+    text-align: center;
+
+    font-size: 38px;
+
+}
+
+
+.descricao {
+
+    margin: 12px 0 30px;
+
+    color: #555;
+
+    text-align: center;
+
+    font-size: 17px;
+
+    line-height: 1.4;
+
+}
+
+
+
+/* ==================================================
+   CAMPOS
+================================================== */
+
+.campo {
+
+    width: 100%;
+
+    margin-bottom: 20px;
+
+}
+
+
+.campo label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #1E3A8A;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+}
+
+
+.campo input {
+
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 16px;
+
+    border: 2px solid #D1D5DB;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-family: "Google Sans", sans-serif;
+
+    font-size: 16px;
+
+    transition: .2s;
+
+}
+
+
+.campo input:focus {
+
+    border-color: #3B82F6;
+
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, .15);
+
+}
+
+
+
+/* ==================================================
+   MENSAGEM
+================================================== */
+
+.mensagem-senha {
+
+    min-height: 22px;
+
+    margin: -5px 0 15px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    color: #DC2626;
+
+}
+
+
+
+/* ==================================================
+   BOTÃO
+================================================== */
+
+.botao-confirmar {
+
+    width: 100%;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background-color: rgb(53, 103, 196);
+
+    color: white;
+
+    font-family: "Google Sans", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+
+.botao-confirmar:hover {
+
+    transform: scale(1.02);
+
+    background-color: rgb(43, 91, 177);
+
+}
+
+
+
+/* ==================================================
+   VOLTAR
+================================================== */
+
+.voltar-login {
+
+    display: block;
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #1E3A8A;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+}
+
+
+.voltar-login:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .pagina-recuperar {
+
+        flex-direction: column;
+
+    }
+
+
+    .lado-esquerdo {
+
+        width: 100%;
+
+        min-height: 250px;
+
+        padding: 35px 20px;
+
+    }
+
+
+    .lado-direito {
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 40px 20px 50px;
+
+    }
+
+
+    .texto-esquerdo {
+
+        margin-top: 20px;
+
+        font-size: 18px;
+
+    }
+
+}
+
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 600px) {
+
+    .lado-esquerdo {
+
+        min-height: 200px;
+
+        padding: 25px 15px;
+
+    }
+
+
+    .logo-auti,
+    .logo-world {
+
+        font-size: 42px;
+
+    }
+
+
+    .emoji {
+
+        font-size: 35px;
+
+        margin-left: 5px;
+
+    }
+
+
+    .texto-esquerdo {
+
+        margin-top: 15px;
+
+        font-size: 16px;
+
+    }
+
+
+    .lado-direito {
+
+        padding: 25px 15px 40px;
+
+    }
+
+
+    .caixa-recuperar {
+
+        padding: 28px 20px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .caixa-recuperar h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .descricao {
+
+        font-size: 15px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .campo input {
+
+        height: 50px;
+
+    }
+
+
+    .botao-confirmar {
+
+        height: 52px;
+
+        font-size: 16px;
+
+    }
+
+}
+
+
+
+/* ==================================================
+   CELULAR PEQUENO
+================================================== */
+
+@media (max-width: 400px) {
+
+    .lado-esquerdo {
+
+        min-height: 180px;
+
+    }
+
+
+    .logo-auti,
+    .logo-world {
+
+        font-size: 35px;
+
+    }
+
+
+    .emoji {
+
+        font-size: 30px;
+
+    }
+
+
+    .caixa-recuperar {
+
+        padding: 25px 16px;
+
+    }
+
+
+    .caixa-recuperar h1 {
+
+        font-size: 27px;
+
+    }
+
+}

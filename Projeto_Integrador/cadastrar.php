@@ -24,6 +24,13 @@
 
         <div class="cadastrar-lado-esquerdo">
 
+            <!-- PEÇA DO QUEBRA-CABEÇA -->
+            <img
+                src="public/css/img/logo.png"
+                alt="Peça do AutiWorld"
+                class="logo-quebra-cabeca">
+
+            <!-- NOME AUTIWORLD -->
             <div class="logo-pt1">
                 <h1>Auti</h1>
             </div>
@@ -57,7 +64,7 @@
                     </a>
 
                     <h1>
-                        Cadastrar
+                        Cadastrar Responsável
                     </h1>
 
                 </div>

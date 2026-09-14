@@ -1,8 +1,29 @@
 <?php
 
+session_name("Projeto_Sistema");
 session_start();
 
+/* ==================================================
+   IMPEDIR CACHE DO NAVEGADOR (botao voltar)
+================================================== */
+
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: 0");
+
 require_once "../models/user.php";
+
+
+/* ==================================================
+   VERIFICAR LOGIN
+================================================== */
+
+if (!isset($_SESSION["id_usuarios"])) {
+
+    header("Location: ../../index.php");
+    exit;
+}
+
 
 $usuario = new User();
 
@@ -10,7 +31,18 @@ $dadosUsuario = $usuario->ListarUmUsuario($_SESSION["id_usuarios"]);
 
 $telefoneResponsavel = $dadosUsuario["numero"];
 
+
+if (!empty($dadosUsuario["url"])) {
+
+    $fotoPerfil = "../../" . $dadosUsuario["url"];
+} else {
+
+    $fotoPerfil =
+        "../../public/css/img/imagem-de_perfil.jpg";
+}
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,6 +55,11 @@ $telefoneResponsavel = $dadosUsuario["numero"];
 
     <link
         href="../../public/css/style-DashBoard.css"
+        rel="stylesheet"
+        type="text/css">
+
+    <link
+        href="../../public/css/acessibilidade.css"
         rel="stylesheet"
         type="text/css">
 </head>
@@ -47,21 +84,24 @@ $telefoneResponsavel = $dadosUsuario["numero"];
                 <p>Olá! Esta é uma pequena mensagem.</p>
             </div>
 
-            <div class="perfil" id="perfil">
+            <div
+                class="perfil"
+                id="perfil">
+
                 <img
-                    src="../../public/css/img/imagem-de_perfil.jpg"
+                    src="<?= htmlspecialchars($fotoPerfil) ?>"
                     alt="Foto de Perfil">
             </div>
 
             <div class="menu-perfil" id="menuPerfil">
 
-                <a href="#">👤 Meu Perfil</a>
+                <a href="perfil.php">👤 Meu Perfil</a>
 
-                <a href="#">🧩 Informações(IS)</a>
+                <a href="informacoes.php">🧩 Informações(IS)</a>
 
-                <a href="#">⚙️ Configurações</a>
+                <a href="configuracoes.php">⚙️ Configurações</a>
 
-                <a href="../../index.php">🚪 Sair</a>
+                <a href="../controllers/logout.php">🚪 Sair</a>
 
             </div>
 
@@ -76,9 +116,7 @@ $telefoneResponsavel = $dadosUsuario["numero"];
 
             <section class="cards">
 
-
                 <!-- CARD 1 -->
-
                 <article class="item-card">
 
                     <a href="Comunicacao.php">
@@ -90,16 +128,67 @@ $telefoneResponsavel = $dadosUsuario["numero"];
                                 alt="Comunicação">
 
                         </button>
-
+                        <p>Comunicação</p>
                     </a>
 
-                    <p>Comunicação</p>
+                  
 
                 </article>
 
 
                 <!-- CARD 2 -->
+                <article class="item-card">
 
+                    <a href="Atividades.php">
+                        <button class="card">
+
+                            <img
+                                src="../../public/css/img/Atividades.png"
+                                alt="Atividades">
+
+                        </button>
+
+                        <p>Atividades</p>
+                    </a>
+                </article>
+
+
+                <!-- CARD 3 -->
+                <article class="item-card">
+                    <a href="escola-virtual.php">
+                        <button class="card">
+
+                            <img
+                                src="../../public/css/img/escola_virtual.png"
+                                alt="Escola virtual">
+
+                        </button>
+                        <p>Escola virtual</p>
+                    </a>
+                    
+
+                </article>
+
+
+                <!-- CARD 4 -->
+                <article class="item-card">
+                    <a href="comunidade.php">
+                        <button class="card">
+
+                            <img
+                                src="../../public/css/img/Comunidade.png"
+                                alt="Comunidade">
+
+                        </button>
+                        <p>Comunidade</p>
+                    </a>
+
+                    
+
+                </article>
+
+
+                <!-- CARD 5 -->
                 <article class="item-card">
 
                     <button
@@ -116,69 +205,91 @@ $telefoneResponsavel = $dadosUsuario["numero"];
 
                 </article>
 
-
-                <!-- CARD 3 -->
-
-                <article class="item-card">
-
-                    <button class="card">
-
-                        <img
-                            src="../../public/css/img/Atividades.png"
-                            alt="Atividades">
-
-                    </button>
-
-                    <p>Atividades</p>
-
-                </article>
-
-
-                <!-- CARD 4 -->
-
-                <article class="item-card">
-
-                    <button class="card">
-
-                        <img
-                            src="../../public/css/img/escola_virtual.png"
-                            alt="Escola virtual">
-
-                    </button>
-
-                    <p>Escola virtual</p>
-
-                </article>
-
-
-                <!-- CARD 5 -->
-
-                <article class="item-card">
-
-                    <button class="card">
-
-                        <img
-                            src="../../public/css/img/Comunidade.png"
-                            alt="Comunidade">
-
-                    </button>
-
-                    <p>Comunidade</p>
-
-                </article>
-
-
             </section>
 
         </div>
 
     </div>
+<script src="../../public/js/acessibilidade.js"></script>
 
-    <script>
-        const telefoneResponsavel = "<?= $telefoneResponsavel ?>";
-    </script>
+<script>
+    const telefoneResponsavel = <?= json_encode($telefoneResponsavel) ?>;
+</script>
 
-    <script src="../../public/js/script.js"></script>
+<script src="../../public/js/script.js"></script>
+
+<script>
+
+function atualizarOnlineDashboard()
+{
+    const dados = new FormData();
+
+    dados.append(
+        "acao",
+        "entrar"
+    );
+
+    fetch(
+        "../controllers/escola-presença_controller.php",
+        {
+            method: "POST",
+            body: dados,
+            credentials: "same-origin"
+        }
+    ).catch(() => {});
+}
+
+
+function heartbeatDashboard()
+{
+    const dados = new FormData();
+
+    dados.append(
+        "acao",
+        "atividade"
+    );
+
+    fetch(
+        "../controllers/escola-presença_controller.php",
+        {
+            method: "POST",
+            body: dados,
+            credentials: "same-origin"
+        }
+    ).catch(() => {});
+}
+
+
+atualizarOnlineDashboard();
+
+
+setInterval(
+    heartbeatDashboard,
+    20000
+);
+
+
+window.addEventListener(
+    "beforeunload",
+    function()
+    {
+
+        const dados = new FormData();
+
+        dados.append(
+            "acao",
+            "sair"
+        );
+
+        navigator.sendBeacon(
+            "../controllers/escola-presença_controller.php",
+            dados
+        );
+
+    }
+);
+
+</script>
 </body>
 
 </html>
